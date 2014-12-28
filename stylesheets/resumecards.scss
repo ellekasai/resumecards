@@ -1,0 +1,38 @@
+---
+---
+
+$container-large-desktop: 970px;
+
+$font-family-base: "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: "Helvetica Neue", Arial, sans-serif;
+$headings-font-weight: 700;
+
+$font-size-base: 15px;
+$font-size-h1: floor(($font-size-base * 2));
+$font-size-h2: floor(($font-size-base * 1.4));
+$font-size-h3: floor(($font-size-base * 1));
+$font-size-h4: floor(($font-size-base * 1));
+$font-size-h5: floor(($font-size-base * 1));
+$font-size-h6: floor(($font-size-base * 1));
+$blockquote-font-size: floor(($font-size-base * 1.25));
+$line-height-base: 1.8;
+$headings-line-height: 1.3;
+
+@import "bootstrap-sass/bootstrap";
+
+@media print {
+  // Bootstrapは、
+  // 1. CSSのなかで、Media Queryが何もないところだと、1 column
+  // 2. @media (min-width: 768px) { ... } -> small grid  (col-smがgridになる)
+  // 3. @media (min-width: 992px) { ... } -> medium grid (col-mdがgridになる)
+  //
+  // -> @media print { ... }のなかは、デフォルトだと1 column
+  //    だがしかし、@include make-grid(sm);を、@media print { ... }の中で
+  //    呼ぶことによって、small gridを適用することができる
+  @include make-grid(sm);
+
+  // レターサイズの紙の大きさにする (日本はA4だけど、アメリカではLetterサイズが標準)
+  @page {
+    size: letter;
+  }
+}
