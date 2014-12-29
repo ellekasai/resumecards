@@ -5369,13 +5369,14 @@ button.close {
   .hidden-print {
     display: none !important; } }
 body {
-  color: #313D5A; }
+  color: #313D5A;
+  background-color: #FEFEFE; }
 
 h1, h2, h3, h4, h5, h6, .panel-title {
   color: #73628A !important; }
 
 .panel {
-  box-shadow: 1px 1px 5px #FAFAFA; }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
 
 .panel-default {
   border-color: #EAEAEA; }
