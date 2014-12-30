@@ -1019,7 +1019,7 @@ h6, .h6 {
     font-size: 75%; }
 
 h1, .h1 {
-  font-size: 24px; }
+  font-size: 36px; }
 
 h2, .h2 {
   font-size: 16px; }
@@ -5370,10 +5370,17 @@ button.close {
     display: none !important; } }
 body {
   color: #313D5A;
-  background-color: #FEFEFE; }
+  background-color: #F3EDF7; }
 
 h1, h2, h3, h4, h5, h6, .panel-title {
   color: #73628A !important; }
+
+h1 + h2 {
+  margin-top: 0;
+  margin-bottom: 50px; }
+
+.container {
+  padding-top: 60px; }
 
 .panel {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
@@ -5384,6 +5391,29 @@ h1, h2, h3, h4, h5, h6, .panel-title {
 .panel-default > .panel-heading {
   background-color: #CBC5EA;
   border-color: #CBC5EA; }
+
+.panel-heading {
+  height: 40px;
+  overflow: hidden; }
+
+.panel-body {
+  height: 400px;
+  overflow: hidden; }
+
+.resume-body {
+  height: 250px;
+  background: url("http://localhost:4000/resumecards//images/cover.jpg") no-repeat center center;
+  background-size: cover; }
+
+.resume-profile {
+  width: 140px;
+  height: 140px;
+  margin-bottom: -470px;
+  border: 5px solid #F3EDF7; }
+
+.resume-date {
+  color: #9CA4B8;
+  line-height: 1.4; }
 
 @media print {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {

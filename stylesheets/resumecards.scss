@@ -8,7 +8,7 @@ $headings-font-family: "Quando", sans-serif;
 $headings-font-weight: 700;
 
 $font-size-base: 12px;
-$font-size-h1: floor(($font-size-base * 2));
+$font-size-h1: floor(($font-size-base * 3));
 $font-size-h2: floor(($font-size-base * 1.4));
 $font-size-h3: floor(($font-size-base * 1));
 $font-size-h4: floor(($font-size-base * 1));
@@ -22,11 +22,20 @@ $headings-line-height: 1.3;
 
 body {
   color: #313D5A;
-  background-color: #FEFEFE;
+  background-color: #F3EDF7;
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title {
   color: #73628A !important;
+}
+
+h1 + h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.container {
+  padding-top: 60px;
 }
 
 .panel {
@@ -40,6 +49,34 @@ h1, h2, h3, h4, h5, h6, .panel-title {
 .panel-default > .panel-heading {
   background-color: #CBC5EA;
   border-color: #CBC5EA;
+}
+
+.panel-heading {
+  height: 40px;
+  overflow: hidden;
+}
+
+.panel-body {
+  height: 400px;
+  overflow: hidden;
+}
+
+.resume-body {
+  height: 250px;
+  background: url("{{ site.url }}/images/cover.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.resume-profile {
+  width: 140px;
+  height: 140px;
+  margin-bottom: -470px;
+  border: 5px solid #F3EDF7;
+}
+
+.resume-date {
+  color: #9CA4B8;
+  line-height: 1.4;
 }
 
 @media print {
