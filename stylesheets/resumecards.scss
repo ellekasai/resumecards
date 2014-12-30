@@ -79,6 +79,11 @@ h1 + h2 {
   line-height: 1.4;
 }
 
+.resume-img {
+  height: 150px;
+  overflow: hidden;
+}
+
 @media print {
   // Bootstrapは、
   // 1. CSSのなかで、Media Queryが何もないところだと、1 column
