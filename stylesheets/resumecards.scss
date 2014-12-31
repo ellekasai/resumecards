@@ -80,8 +80,14 @@ h1 + h2 {
 }
 
 .resume-img {
-  height: 150px;
+  height: 140px;
   overflow: hidden;
+  border: 1px solid #F3EDF7;
+  border-radius: 6px;
+}
+
+.resume-img + * {
+  margin-top: 15px;
 }
 
 @media print {
