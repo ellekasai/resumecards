@@ -1,6 +1,10 @@
 ---
 ---
 
+/*———————————–———————————–
+  Overwrite Bootstrap
+———————————–———————————–*/
+
 $container-large-desktop: 970px;
 
 $font-family-base: "Muli", sans-serif;
@@ -61,6 +65,10 @@ h1 + h2 {
   overflow: hidden;
 }
 
+/*———————————–———————————–
+  Styles
+———————————–———————————–*/
+
 .resume-body {
   height: 250px;
   background: url("{{ site.url }}/images/cover.jpg") no-repeat center center;
@@ -91,17 +99,7 @@ h1 + h2 {
 }
 
 @media print {
-  // Bootstrapは、
-  // 1. CSSのなかで、Media Queryが何もないところだと、1 column
-  // 2. @media (min-width: 768px) { ... } -> small grid  (col-smがgridになる)
-  // 3. @media (min-width: 992px) { ... } -> medium grid (col-mdがgridになる)
-  //
-  // -> @media print { ... }のなかは、デフォルトだと1 column
-  //    だがしかし、@include make-grid(sm);を、@media print { ... }の中で
-  //    呼ぶことによって、small gridを適用することができる
   @include make-grid(sm);
-
-  // レターサイズの紙の大きさにする (日本はA4だけど、アメリカではLetterサイズが標準)
   @page {
     size: letter;
   }

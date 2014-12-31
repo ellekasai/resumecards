@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*———————————–———————————–
+  Overwrite Bootstrap
+———————————–———————————–*/
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5400,6 +5403,9 @@ h1 + h2 {
   height: 400px;
   overflow: hidden; }
 
+/*———————————–———————————–
+  Styles
+———————————–———————————–*/
 .resume-body {
   height: 250px;
   background: url("http://localhost:4000/resumecards//images/cover.jpg") no-repeat center center;
