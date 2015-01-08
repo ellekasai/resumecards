@@ -29,13 +29,16 @@ body {
   background-color: #F3EDF7;
 }
 
-h1, h2, h3, h4, h5, h6, .panel-title {
+h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
   color: #73628A !important;
 }
 
-h1 + h2 {
+h1 {
+  margin-top: 15px;
+}
+
+h2 {
   margin-top: 0;
-  margin-bottom: 50px;
 }
 
 .container {
@@ -61,13 +64,37 @@ h1 + h2 {
 }
 
 .panel-body {
-  height: 400px;
+  height: 250px;
   overflow: hidden;
 }
 
 /*———————————–———————————–
   Styles
 ———————————–———————————–*/
+
+.resume-profile {
+  float: left;
+}
+
+.resume-pic,
+.resume-baseinfo {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.resume-pic + .resume-baseinfo {
+  margin-left: 20px;
+}
+
+.resume-contact {
+  float: right;
+  width: 290px;
+  margin-bottom: 15px;
+  font-family: "Quando", sans-serif;
+  p {
+    margin-bottom: 5px;
+  }
+}
 
 .resume-date {
   color: #9CA4B8;
