@@ -69,19 +69,6 @@ h1 + h2 {
   Styles
 ———————————–———————————–*/
 
-.resume-body {
-  height: 250px;
-  background: url("{{ site.url }}/images/cover.jpg") no-repeat center center;
-  background-size: cover;
-}
-
-.resume-profile {
-  width: 140px;
-  height: 140px;
-  margin-bottom: -470px;
-  border: 5px solid #F3EDF7;
-}
-
 .resume-date {
   color: #9CA4B8;
   line-height: 1.4;
