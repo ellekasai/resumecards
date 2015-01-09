@@ -41,10 +41,6 @@ h2 {
   margin-top: 0;
 }
 
-.container {
-  padding-top: 60px;
-}
-
 .panel {
   box-shadow: 0 1px 3px rgba(0,0,0,.1);
 }
@@ -64,13 +60,29 @@ h2 {
 }
 
 .panel-body {
-  height: 250px;
+  height: 300px;
   overflow: hidden;
+}
+
+.navbar-default {
+  background-color: #FFF;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.navbar-nav {
+  font-size: 14px;
 }
 
 /*———————————–———————————–
   Styles
 ———————————–———————————–*/
+
+.resume-btns {
+  padding-top: 10px;
+}
 
 .resume-profile {
   float: left;
@@ -105,5 +117,6 @@ h2 {
   @include make-grid(sm);
   @page {
     size: letter;
+    margin: 0px auto;
   }
 }
