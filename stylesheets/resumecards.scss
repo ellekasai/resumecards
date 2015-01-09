@@ -76,11 +76,22 @@ h2 {
   font-size: 14px;
 }
 
+.btn {
+  font-size: 14px;
+}
+
 /*———————————–———————————–
   Styles
 ———————————–———————————–*/
 
-.resume-btns {
+.resume-left {
+  padding-top: 4px;
+  span {
+    margin-left: 20px;
+    color: #9CA4B8;
+  }
+}
+.resume-right {
   padding-top: 10px;
 }
 
@@ -111,6 +122,17 @@ h2 {
 .resume-date {
   color: #9CA4B8;
   line-height: 1.4;
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-padding {
+  padding-top: 70px;
 }
 
 @media print {
