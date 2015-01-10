@@ -28,18 +28,33 @@ $color-muted: #9CA4B8;
 $color-bg: #F3EDF7;
 $color-panel-hedding: #CBC5EA;
 
-// http://www.materialui.co/colors
+/*———————————–———————————–
+  Custom Colors
+———————————–———————————–*/
+
+//red
 $red: #C46767;
 $red-text: #372424;
 $red-muted: #BAB1B1;
 $red-bg: #FFF5F6;
 $red-panel-hedding: #FFCDD2;
 
+//pink
 $pink: #F48FB1;
+
+//blue
 $blue: #90CAF9;
+
+//cyan
 $cyan: #80DEEA;
+
+//green
 $green: #A5D6A7;
+
+//lime
 $lime: #E6EE9C;
+
+//orange
 $orange: #FFCC80;
 
 {% unless site.data.resume.color == "default" %}
