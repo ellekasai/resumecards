@@ -22,11 +22,11 @@ $blockquote-font-size: floor(($font-size-base * 1.25));
 $line-height-base: 1.8;
 $headings-line-height: 1.3;
 
-$color-primary: #73628A;
-$color-text: #313D5A;
-$color-muted: #9CA4B8;
-$color-bg: #F3EDF7;
-$color-panel-hedding: #CBC5EA;
+$default: #705596;
+$color-text: darken($default, 50%);
+$color-muted: grayscale($default);
+$color-bg: lighten($default, 50%);
+$color-heading: lighten($default, 40%);
 
 /*———————————–———————————–
   Custom Colors
@@ -83,13 +83,13 @@ $orange-heading: lighten($orange, 25%);
 
 {% unless site.data.resume.color == "default" %}
 
-  $theme-primary: ${{ site.data.resume.color }};
+  $theme-color: ${{ site.data.resume.color }};
   $theme-text: ${{ site.data.resume.color }}-text;
   $theme-muted: ${{ site.data.resume.color }}-muted;
   $theme-bg: ${{ site.data.resume.color }}-bg;
   $theme-heading: ${{ site.data.resume.color }}-heading;
 
-  $color-primary: $theme-primary;
+  $color: $theme-color;
   $color-text: $theme-text;
   $color-muted: $theme-muted;
   $color-bg: $theme-bg;
@@ -113,7 +113,7 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
-  color: $color-primary;
+  color: $default;
 }
 
 h1 {
@@ -125,16 +125,16 @@ h2 {
 }
 
 .panel {
-  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
 .panel-default {
-  border-color: #EEE;
+  border: none;
 }
 
 .panel-default > .panel-heading {
   background-color: $color-heading;
-  border-color: $color-heading;
+  border: none;
 }
 
 .panel-heading {
