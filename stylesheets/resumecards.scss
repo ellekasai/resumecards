@@ -119,6 +119,10 @@ h2 {
   }
 }
 
+.resume-nav {
+  width: 100%;
+}
+
 .resume-date {
   color: #9CA4B8;
   line-height: 1.4;
@@ -127,7 +131,6 @@ h2 {
 .nav-fixed {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1;
 }
 
