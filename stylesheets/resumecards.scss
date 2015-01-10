@@ -64,6 +64,10 @@ h2 {
   overflow: hidden;
 }
 
+.navbar {
+  width: 100%;
+}
+
 .navbar-default {
   background-color: #FFF;
 }
@@ -80,9 +84,17 @@ h2 {
   font-size: 14px;
 }
 
+.affix {
+  top: 0;
+}
+
 /*———————————–———————————–
   Styles
 ———————————–———————————–*/
+
+.resume-nav {
+  width: 100%;
+}
 
 .resume-left {
   padding-top: 4px;
@@ -91,6 +103,7 @@ h2 {
     color: #9CA4B8;
   }
 }
+
 .resume-right {
   padding-top: 10px;
 }
@@ -119,23 +132,9 @@ h2 {
   }
 }
 
-.resume-nav {
-  width: 100%;
-}
-
 .resume-date {
   color: #9CA4B8;
   line-height: 1.4;
-}
-
-.nav-fixed {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-}
-
-.nav-padding {
-  padding-top: 70px;
 }
 
 @media print {
