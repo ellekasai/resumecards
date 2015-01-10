@@ -12,7 +12,7 @@ job: "UI/UX designer"
 # - pink
 # - blue
 # - cyan
+# - teal
 # - green
-# - lime
 # - orange
-color: pink
+color: orange

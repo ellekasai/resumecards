@@ -34,32 +34,52 @@ $color-panel-hedding: #CBC5EA;
 
 //red
 $red: #C46767;
-$red-text: #372424;
-$red-muted: #BAB1B1;
-$red-bg: #FFF5F6;
-$red-heading: #FFCDD2;
+$red-text: darken($red, 50%);
+$red-muted: grayscale($red);
+$red-bg: lighten($red, 35%);
+$red-heading: lighten($red, 25%);
 
 //pink
-$pink: #E86C96;
-$pink-text: #843851;
-$pink-muted: #919191;
-$pink-bg: #FFFAFC;
-$pink-heading: #FFD0E0;
+$pink: #DC678F;
+$pink-text: darken($pink, 50%);
+$pink-muted: grayscale($pink);
+$pink-bg: lighten($pink, 35%);
+$pink-heading: lighten($pink, 25%);
 
 //blue
-$blue: #90CAF9;
+$blue: #59A2DD;
+$blue-text: darken($blue, 50%);
+$blue-muted: grayscale($blue);
+$blue-bg: lighten($blue, 35%);
+$blue-heading: lighten($blue, 25%);
 
 //cyan
-$cyan: #80DEEA;
+$cyan: #53CAD9;
+$cyan-text: darken($cyan, 50%);
+$cyan-muted: grayscale($cyan);
+$cyan-bg: lighten($cyan, 35%);
+$cyan-heading: lighten($cyan, 25%);
+
+//teal
+$teal: #62D2C8;
+$teal-text: darken($teal, 50%);
+$teal-muted: grayscale($teal);
+$teal-bg: lighten($teal, 35%);
+$teal-heading: lighten($teal, 25%);
 
 //green
-$green: #A5D6A7;
-
-//lime
-$lime: #E6EE9C;
+$green: #76B379;
+$green-text: darken($green, 50%);
+$green-muted: grayscale($green);
+$green-bg: lighten($green, 35%);
+$green-heading: lighten($green, 25%);
 
 //orange
-$orange: #FFCC80;
+$orange: #FCA82C;
+$orange-text: darken($orange, 50%);
+$orange-muted: grayscale($orange);
+$orange-bg: lighten($orange, 35%);
+$orange-heading: lighten($orange, 25%);
 
 {% unless site.data.resume.color == "default" %}
 
