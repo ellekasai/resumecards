@@ -12,7 +12,7 @@ $headings-font-family: "Quando", sans-serif;
 $headings-font-weight: 700;
 
 $font-size-base: 12px;
-$font-size-h1: floor(($font-size-base * 3));
+$font-size-h1: floor(($font-size-base * 2.5));
 $font-size-h2: floor(($font-size-base * 1.4));
 $font-size-h3: floor(($font-size-base * 1));
 $font-size-h4: floor(($font-size-base * 1));
@@ -36,15 +36,15 @@ $color-heading: lighten($default, 40%);
 $red: #C46767;
 $red-text: darken($red, 50%);
 $red-muted: grayscale($red);
-$red-bg: lighten($red, 35%);
-$red-heading: lighten($red, 25%);
+$red-bg: lighten($red, 40%);
+$red-heading: lighten($red, 30%);
 
 //pink
-$pink: #DC678F;
+$pink: #D95D87;
 $pink-text: darken($pink, 50%);
 $pink-muted: grayscale($pink);
-$pink-bg: lighten($pink, 35%);
-$pink-heading: lighten($pink, 25%);
+$pink-bg: lighten($pink, 38%);
+$pink-heading: lighten($pink, 30%);
 
 //blue
 $blue: #59A2DD;
@@ -89,7 +89,7 @@ $orange-heading: lighten($orange, 25%);
   $theme-bg: ${{ site.data.resume.color }}-bg;
   $theme-heading: ${{ site.data.resume.color }}-heading;
 
-  $color: $theme-color;
+  $default: $theme-color;
   $color-text: $theme-text;
   $color-muted: $theme-muted;
   $color-bg: $theme-bg;
@@ -117,10 +117,6 @@ h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
 }
 
 h1 {
-  margin-top: 15px;
-}
-
-h2 {
   margin-top: 0;
 }
 
@@ -191,24 +187,28 @@ h2 {
   padding-top: 10px;
 }
 
-.resume-profile {
-  float: left;
+.resume-header {
+  padding-bottom: 20px;
 }
 
-.resume-pic,
-.resume-baseinfo {
-  display: inline-block;
-  vertical-align: middle;
+.resume-copy {
+  color: $default;
+  font-family: "Quando", sans-serif;
+  font-size: 13px;
+}
+
+.resume-pic {
+  float: left;
+  img {
+    border: 1px solid #ddd;
+  }
 }
 
 .resume-pic + .resume-baseinfo {
-  margin-left: 20px;
+  margin-left: 150px;
 }
 
 .resume-contact {
-  float: right;
-  width: 290px;
-  margin-bottom: 15px;
   font-family: "Quando", sans-serif;
   p {
     margin-bottom: 5px;
