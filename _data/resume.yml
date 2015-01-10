@@ -5,11 +5,12 @@ job: "UI/UX designer"
 # Color scheme based on http://www.materialui.co/colors.
 # Possible values:
 # - default
-# - dark
-# - turquoise
-# - green
-# - blue
-# - purple
-# - orange
 # - red
+# - pink
+# - deep purple
+# - blue
+# - cyan
+# - green
+# - lime
+# - orange
 color: default
