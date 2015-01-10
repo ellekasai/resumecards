@@ -37,10 +37,14 @@ $red: #C46767;
 $red-text: #372424;
 $red-muted: #BAB1B1;
 $red-bg: #FFF5F6;
-$red-panel-hedding: #FFCDD2;
+$red-heading: #FFCDD2;
 
 //pink
-$pink: #F48FB1;
+$pink: #E86C96;
+$pink-text: #843851;
+$pink-muted: #919191;
+$pink-bg: #FFFAFC;
+$pink-heading: #FFD0E0;
 
 //blue
 $blue: #90CAF9;
@@ -63,13 +67,13 @@ $orange: #FFCC80;
   $theme-text: ${{ site.data.resume.color }}-text;
   $theme-muted: ${{ site.data.resume.color }}-muted;
   $theme-bg: ${{ site.data.resume.color }}-bg;
-  $theme-panel-heading: ${{ site.data.resume.color }}-panel-hedding;
+  $theme-heading: ${{ site.data.resume.color }}-heading;
 
   $color-primary: $theme-primary;
   $color-text: $theme-text;
   $color-muted: $theme-muted;
   $color-bg: $theme-bg;
-  $color-panel-hedding: $theme-panel-heading;
+  $color-heading: $theme-heading;
 
 {% endunless %}
 
@@ -82,6 +86,10 @@ $orange: #FFCC80;
 body {
   color: $color-text;
   background-color: $color-bg;
+}
+
+header {
+  padding-bottom: 50px;
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
@@ -105,8 +113,8 @@ h2 {
 }
 
 .panel-default > .panel-heading {
-  background-color: $color-panel-hedding;
-  border-color: $color-panel-hedding;
+  background-color: $color-heading;
+  border-color: $color-heading;
 }
 
 .panel-heading {
