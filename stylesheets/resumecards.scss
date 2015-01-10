@@ -2,7 +2,7 @@
 ---
 
 /*———————————–———————————–
-  Overwrite Bootstrap
+  Base Settings
 ———————————–———————————–*/
 
 $container-large-desktop: 970px;
@@ -22,15 +22,55 @@ $blockquote-font-size: floor(($font-size-base * 1.25));
 $line-height-base: 1.8;
 $headings-line-height: 1.3;
 
+$color-primary: #73628A;
+$color-text: #313D5A;
+$color-muted: #9CA4B8;
+$color-bg: #F3EDF7;
+$color-panel-hedding: #CBC5EA;
+
+// http://www.materialui.co/colors
+$red: #C46767;
+$red-text: #372424;
+$red-muted: #BAB1B1;
+$red-bg: #FFF5F6;
+$red-panel-hedding: #FFCDD2;
+
+$pink: #F48FB1;
+$blue: #90CAF9;
+$cyan: #80DEEA;
+$green: #A5D6A7;
+$lime: #E6EE9C;
+$orange: #FFCC80;
+
+{% unless site.data.resume.color == "default" %}
+
+  $theme-primary: ${{ site.data.resume.color }};
+  $theme-text: ${{ site.data.resume.color }}-text;
+  $theme-muted: ${{ site.data.resume.color }}-muted;
+  $theme-bg: ${{ site.data.resume.color }}-bg;
+  $theme-panel-heading: ${{ site.data.resume.color }}-panel-hedding;
+
+  $color-primary: $theme-primary;
+  $color-text: $theme-text;
+  $color-muted: $theme-muted;
+  $color-bg: $theme-bg;
+  $color-panel-hedding: $theme-panel-heading;
+
+{% endunless %}
+
 @import "bootstrap-sass/bootstrap";
 
+/*———————————–———————————–
+  Overwrite Bootstrap
+———————————–———————————–*/
+
 body {
-  color: #313D5A;
-  background-color: #F3EDF7;
+  color: $color-text;
+  background-color: $color-bg;
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
-  color: #73628A !important;
+  color: $color-primary;
 }
 
 h1 {
@@ -46,12 +86,12 @@ h2 {
 }
 
 .panel-default {
-  border-color: #EAEAEA;
+  border-color: #EEE;
 }
 
 .panel-default > .panel-heading {
-  background-color: #CBC5EA;
-  border-color: #CBC5EA;
+  background-color: $color-panel-hedding;
+  border-color: $color-panel-hedding;
 }
 
 .panel-heading {
@@ -100,7 +140,7 @@ h2 {
   padding-top: 4px;
   span {
     margin-left: 20px;
-    color: #9CA4B8;
+    color: #999;
   }
 }
 
@@ -133,7 +173,7 @@ h2 {
 }
 
 .resume-date {
-  color: #9CA4B8;
+  color: $color-muted;
   line-height: 1.4;
 }
 

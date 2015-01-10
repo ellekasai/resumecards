@@ -1,3 +1,6 @@
+# Theme customization is done on this file instead of _config.yml so that
+# you don't have to restart Jekyll to see changes.
+
 photo: "https://avatars0.githubusercontent.com/u/2410692?v=2&s=150"
 name: "Elle Kasai"
 job: "UI/UX designer"
@@ -7,10 +10,9 @@ job: "UI/UX designer"
 # - default
 # - red
 # - pink
-# - deep purple
 # - blue
 # - cyan
 # - green
 # - lime
 # - orange
-color: default
+color: red
