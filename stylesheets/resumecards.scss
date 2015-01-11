@@ -22,12 +22,12 @@ $blockquote-font-size: floor(($font-size-base * 1.25));
 $line-height-base: 1.5;
 $headings-line-height: 1.3;
 
-$default: #705596;
+$default: #8064A7;
 $color-sub: lighten($default, 20%);
 $color-text: darken($default, 50%);
 $color-muted: grayscale($default);
-$color-bg: lighten($default, 50%);
-$color-heading: lighten($default, 40%);
+$color-bg: lighten($default, 40%);
+$color-heading: lighten($default, 30%);
 
 /*———————————–———————————–
   Custom Colors
@@ -58,36 +58,36 @@ $blue-bg: lighten($blue, 35%);
 $blue-heading: lighten($blue, 25%);
 
 //cyan
-$cyan: #53CAD9;
+$cyan: #42C1D1;
 $cyan-sub: lighten($cyan, 10%);
 $cyan-text: darken($cyan, 50%);
 $cyan-muted: grayscale($cyan);
-$cyan-bg: lighten($cyan, 35%);
-$cyan-heading: lighten($cyan, 25%);
+$cyan-bg: lighten($cyan, 45%);
+$cyan-heading: lighten($cyan, 35%);
 
 //teal
-$teal: #62D2C8;
+$teal: #54C2B8;
 $teal-sub: lighten($teal, 10%);
 $teal-text: darken($teal, 50%);
 $teal-muted: grayscale($teal);
-$teal-bg: lighten($teal, 35%);
-$teal-heading: lighten($teal, 25%);
+$teal-bg: lighten($teal, 40%);
+$teal-heading: lighten($teal, 30%);
 
 //green
-$green: #76B379;
+$green: #6BAB6E;
 $green-sub: lighten($green, 10%);
 $green-text: darken($green, 50%);
 $green-muted: grayscale($green);
-$green-bg: lighten($green, 35%);
-$green-heading: lighten($green, 25%);
+$green-bg: lighten($green, 40%);
+$green-heading: lighten($green, 30%);
 
 //orange
-$orange: #FCA82C;
+$orange: #F29F23;
 $orange-sub: lighten($orange, 10%);
 $orange-text: darken($orange, 50%);
 $orange-muted: grayscale($orange);
-$orange-bg: lighten($orange, 35%);
-$orange-heading: lighten($orange, 25%);
+$orange-bg: lighten($orange, 45%);
+$orange-heading: lighten($orange, 35%);
 
 {% unless site.data.resume.color == "default" %}
 
