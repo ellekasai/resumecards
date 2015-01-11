@@ -134,6 +134,13 @@ h4 {
   margin: 0 0 5px 0;
 }
 
+a {
+  color: $default;
+  &:hover {
+    color: $color-sub;
+  }
+}
+
 .panel {
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
