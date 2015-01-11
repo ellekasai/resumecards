@@ -15,14 +15,15 @@ $font-size-base: 12px;
 $font-size-h1: floor(($font-size-base * 2.5));
 $font-size-h2: floor(($font-size-base * 1.4));
 $font-size-h3: floor(($font-size-base * 1));
-$font-size-h4: floor(($font-size-base * 1));
+$font-size-h4: floor(($font-size-base * 1.2));
 $font-size-h5: floor(($font-size-base * 1));
 $font-size-h6: floor(($font-size-base * 1));
 $blockquote-font-size: floor(($font-size-base * 1.25));
-$line-height-base: 1.8;
+$line-height-base: 1.5;
 $headings-line-height: 1.3;
 
 $default: #705596;
+$color-sub: lighten($default, 20%);
 $color-text: darken($default, 50%);
 $color-muted: grayscale($default);
 $color-bg: lighten($default, 50%);
@@ -34,6 +35,7 @@ $color-heading: lighten($default, 40%);
 
 //red
 $red: #C46767;
+$red-sub: lighten($red, 20%);
 $red-text: darken($red, 50%);
 $red-muted: grayscale($red);
 $red-bg: lighten($red, 40%);
@@ -41,6 +43,7 @@ $red-heading: lighten($red, 30%);
 
 //pink
 $pink: #D95D87;
+$pink-sub: lighten($pink, 20%);
 $pink-text: darken($pink, 50%);
 $pink-muted: grayscale($pink);
 $pink-bg: lighten($pink, 38%);
@@ -48,6 +51,7 @@ $pink-heading: lighten($pink, 30%);
 
 //blue
 $blue: #59A2DD;
+$blue-sub: lighten($blue, 10%);
 $blue-text: darken($blue, 50%);
 $blue-muted: grayscale($blue);
 $blue-bg: lighten($blue, 35%);
@@ -55,6 +59,7 @@ $blue-heading: lighten($blue, 25%);
 
 //cyan
 $cyan: #53CAD9;
+$cyan-sub: lighten($cyan, 10%);
 $cyan-text: darken($cyan, 50%);
 $cyan-muted: grayscale($cyan);
 $cyan-bg: lighten($cyan, 35%);
@@ -62,6 +67,7 @@ $cyan-heading: lighten($cyan, 25%);
 
 //teal
 $teal: #62D2C8;
+$teal-sub: lighten($teal, 10%);
 $teal-text: darken($teal, 50%);
 $teal-muted: grayscale($teal);
 $teal-bg: lighten($teal, 35%);
@@ -69,6 +75,7 @@ $teal-heading: lighten($teal, 25%);
 
 //green
 $green: #76B379;
+$green-sub: lighten($green, 10%);
 $green-text: darken($green, 50%);
 $green-muted: grayscale($green);
 $green-bg: lighten($green, 35%);
@@ -76,6 +83,7 @@ $green-heading: lighten($green, 25%);
 
 //orange
 $orange: #FCA82C;
+$orange-sub: lighten($orange, 10%);
 $orange-text: darken($orange, 50%);
 $orange-muted: grayscale($orange);
 $orange-bg: lighten($orange, 35%);
@@ -84,12 +92,14 @@ $orange-heading: lighten($orange, 25%);
 {% unless site.data.resume.color == "default" %}
 
   $theme-color: ${{ site.data.resume.color }};
+  $theme-sub: ${{ site.data.resume.color }}-sub;
   $theme-text: ${{ site.data.resume.color }}-text;
   $theme-muted: ${{ site.data.resume.color }}-muted;
   $theme-bg: ${{ site.data.resume.color }}-bg;
   $theme-heading: ${{ site.data.resume.color }}-heading;
 
   $default: $theme-color;
+  $color-sub: $theme-sub;
   $color-text: $theme-text;
   $color-muted: $theme-muted;
   $color-bg: $theme-bg;
@@ -120,6 +130,10 @@ h1 {
   margin-top: 0;
 }
 
+h4 {
+  margin: 0 0 5px 0;
+}
+
 .panel {
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
@@ -134,12 +148,19 @@ h1 {
 }
 
 .panel-heading {
-  height: 40px;
+  height: 30px;
   overflow: hidden;
 }
 
+.panel-title {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 .panel-body {
-  height: 300px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -176,7 +197,7 @@ h1 {
 }
 
 .resume-left {
-  padding-top: 4px;
+  padding-top: 7px;
   span {
     margin-left: 20px;
     color: #999;
@@ -213,6 +234,12 @@ h1 {
   p {
     margin-bottom: 5px;
   }
+}
+
+.resume-position {
+  color: $color-sub;
+  font-family: "Quando", sans-serif;
+  font-size: 12px;
 }
 
 .resume-date {
