@@ -27,75 +27,69 @@ $headings-line-height: 1.3;
 ———————————–———————————–*/
 
 $default-base: #8064A7;
-$default: ("base": $default-base,
-           "sub": lighten($default-base, 20%),
-           "text": darken($default-base, 50%),
-           "muted": grayscale($default-base),
-           "bg": lighten($default-base, 40%),
-           "heading": lighten($default-base, 30%));
-
 $red-base: #C46767;
-$red: ("base": $red-base,
-       "sub": lighten($red-base, 20%),
-       "text": darken($red-base, 50%),
-       "muted": grayscale($red-base),
-       "bg": lighten($red-base, 40%),
-       "heading": lighten($red-base, 30%));
-
 $pink-base: #D95D87;
-$pink: ("base": $pink-base,
-        "sub": lighten($pink-base, 20%),
-        "text": darken($pink-base, 50%),
-        "muted": grayscale($pink-base),
-        "bg": lighten($pink-base, 38%),
-        "heading": lighten($pink-base, 30%));
-
 $orange-base: #F29F23;
-$orange: ("base": $orange-base,
-          "sub": lighten($orange-base, 10%),
-          "text": darken($orange-base, 50%),
-          "muted": grayscale($orange-base),
-          "bg": lighten($orange-base, 45%),
-          "heading": lighten($orange-base, 35%));
-
 $blue-base: #59A2DD;
-$blue: ("base": $blue-base,
-        "sub": lighten($blue-base, 10%),
-        "text": darken($blue-base, 50%),
-        "muted": grayscale($blue-base),
-        "bg": lighten($blue-base, 35%),
-        "heading": lighten($blue-base, 25%));
-
 $cyan-base: #42C1D1;
-$cyan: ("base": $cyan-base,
-        "sub": lighten($cyan-base, 10%),
-        "text": darken($cyan-base, 50%),
-        "muted": grayscale($cyan-base),
-        "bg": lighten($cyan-base, 45%),
-        "heading": lighten($cyan-base, 35%));
-
 $teal-base: #54C2B8;
-$teal: ("base": $teal-base,
-        "sub": lighten($teal-base, 10%),
-        "text": darken($teal-base, 50%),
-        "muted": grayscale($teal-base),
-        "bg": lighten($teal-base, 40%),
-        "heading": lighten($teal-base, 30%));
-
 $green-base: #6BAB6E;
-$green: ("base": $green-base,
-         "sub": lighten($green-base, 10%),
-         "text": darken($green-base, 50%),
-         "muted": grayscale($green-base),
-         "bg": lighten($green-base, 40%),
-         "heading": lighten($green-base, 30%));
 
-$theme-color: map-get(${{ site.data.resume.color }}, "base");
-$theme-sub: map-get(${{ site.data.resume.color }}, "sub");
-$theme-text:  map-get(${{ site.data.resume.color }}, "text");
-$theme-muted:  map-get(${{ site.data.resume.color }}, "muted");
-$theme-bg:  map-get(${{ site.data.resume.color }}, "bg");
-$theme-heading:  map-get(${{ site.data.resume.color }}, "heading");
+$all-colors: ("default": ("base": $default-base,
+                          "sub": lighten($default-base, 20%),
+                          "text": darken($default-base, 50%),
+                          "muted": grayscale($default-base),
+                          "bg": lighten($default-base, 40%),
+                          "heading": lighten($default-base, 30%)),
+              "red": ("base": $red-base,
+                      "sub": lighten($red-base, 20%),
+                      "text": darken($red-base, 50%),
+                      "muted": grayscale($red-base),
+                      "bg": lighten($red-base, 40%),
+                      "heading": lighten($red-base, 30%)),
+              "pink": ("base": $pink-base,
+                       "sub": lighten($pink-base, 20%),
+                       "text": darken($pink-base, 50%),
+                       "muted": grayscale($pink-base),
+                       "bg": lighten($pink-base, 38%),
+                       "heading": lighten($pink-base, 30%)),
+              "orange": ("base": $orange-base,
+                         "sub": lighten($orange-base, 10%),
+                         "text": darken($orange-base, 50%),
+                         "muted": grayscale($orange-base),
+                         "bg": lighten($orange-base, 45%),
+                         "heading": lighten($orange-base, 35%)),
+              "blue": ("base": $blue-base,
+                       "sub": lighten($blue-base, 10%),
+                       "text": darken($blue-base, 50%),
+                       "muted": grayscale($blue-base),
+                       "bg": lighten($blue-base, 35%),
+                       "heading": lighten($blue-base, 25%)),
+              "cyan": ("base": $cyan-base,
+                       "sub": lighten($cyan-base, 10%),
+                       "text": darken($cyan-base, 50%),
+                       "muted": grayscale($cyan-base),
+                       "bg": lighten($cyan-base, 45%),
+                       "heading": lighten($cyan-base, 35%)),
+              "teal":  ("base": $teal-base,
+                        "sub": lighten($teal-base, 10%),
+                        "text": darken($teal-base, 50%),
+                        "muted": grayscale($teal-base),
+                        "bg": lighten($teal-base, 40%),
+                        "heading": lighten($teal-base, 30%)),
+              "green": ("base": $green-base,
+                        "sub": lighten($green-base, 10%),
+                        "text": darken($green-base, 50%),
+                        "muted": grayscale($green-base),
+                        "bg": lighten($green-base, 40%),
+                        "heading": lighten($green-base, 30%)));
+
+$theme-color: map-get(map-get($all-colors, "{{ site.data.resume.color }}"), "base");
+$theme-sub: map-get(map-get($all-colors, "{{ site.data.resume.color }}"), "sub");
+$theme-text: map-get(map-get($all-colors, "{{ site.data.resume.color }}"), "text");
+$theme-muted: map-get(map-get($all-colors, "{{ site.data.resume.color }}"), "muted");
+$theme-bg: map-get(map-get($all-colors, "{{ site.data.resume.color }}"), "bg");
+$theme-heading: map-get(map-get($all-colors, "{{ site.data.resume.color }}"), "heading");
 
 $color-base: $theme-color;
 $color-sub: $theme-sub;
@@ -114,10 +108,10 @@ body {
   color: $color-text;
   background-color: $color-bg;
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     &.theme-#{$color-name} {
-      color: map-get(${{ site.data.resume.color }}, "text");
-      background-color: map-get(${{ site.data.resume.color }}, "bg");
+      color: map-get(map-get($all-colors, $color-name), "text");
+      background-color: map-get(map-get($all-colors, $color-name), "bg");
     }
   }
 }
@@ -129,9 +123,9 @@ header {
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
   color: $color-base;
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     .theme-#{$color-name} & {
-      color: map-get(${{ site.data.resume.color }}, "base");
+      color: map-get(map-get($all-colors, $color-name), "base");
     }
   }
 }
@@ -150,11 +144,11 @@ a {
     color: $color-sub;
   }
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     .theme-#{$color-name} & {
-      color: map-get(${{ site.data.resume.color }}, "base");
+      color: map-get(map-get($all-colors, $color-name), "base");
       &:hover {
-        color: map-get(${{ site.data.resume.color }}, "sub");
+        color: map-get(map-get($all-colors, $color-name), "sub");
       }
     }
   }
@@ -172,9 +166,9 @@ a {
   background-color: $color-heading;
   border: none;
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     .theme-#{$color-name} & {
-      background-color: map-get(${{ site.data.resume.color }}, "heading");
+      background-color: map-get(map-get($all-colors, $color-name), "heading");
     }
   }
 }
@@ -254,9 +248,9 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 13px;
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     .theme-#{$color-name} & {
-      color: map-get(${{ site.data.resume.color }}, "base");
+      color: map-get(map-get($all-colors, $color-name), "base");
     }
   }
 }
@@ -267,10 +261,10 @@ a {
     border: 1px solid $color-sub;
   }
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     .theme-#{$color-name} & {
       img {
-        border: 1px solid map-get(${{ site.data.resume.color }}, "sub");
+        border: 1px solid map-get(map-get($all-colors, $color-name), "sub");
       }
     }
   }
@@ -292,9 +286,9 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 12px;
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     .theme-#{$color-name} & {
-      color: map-get(${{ site.data.resume.color }}, "sub");
+      color: map-get(map-get($all-colors, $color-name), "sub");
     }
   }
 }
@@ -303,9 +297,9 @@ a {
   color: $color-muted;
   line-height: 1.4;
 
-  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
     .theme-#{$color-name} & {
-      color: map-get(${{ site.data.resume.color }}, "muted");
+      color: map-get(map-get($all-colors, $color-name), "muted");
     }
   }
 }
