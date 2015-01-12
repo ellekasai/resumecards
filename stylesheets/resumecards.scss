@@ -22,90 +22,87 @@ $blockquote-font-size: floor(($font-size-base * 1.25));
 $line-height-base: 1.5;
 $headings-line-height: 1.3;
 
-$default: #8064A7;
-$color-sub: lighten($default, 20%);
-$color-text: darken($default, 50%);
-$color-muted: grayscale($default);
-$color-bg: lighten($default, 40%);
-$color-heading: lighten($default, 30%);
-
 /*———————————–———————————–
-  Custom Colors
+  Theme Colors
 ———————————–———————————–*/
 
-//red
-$red: #C46767;
-$red-sub: lighten($red, 20%);
-$red-text: darken($red, 50%);
-$red-muted: grayscale($red);
-$red-bg: lighten($red, 40%);
-$red-heading: lighten($red, 30%);
+$default-base: #8064A7;
+$default: ("base": $default-base,
+           "sub": lighten($default-base, 20%),
+           "text": darken($default-base, 50%),
+           "muted": grayscale($default-base),
+           "bg": lighten($default-base, 40%),
+           "heading": lighten($default-base, 30%));
 
-//pink
-$pink: #D95D87;
-$pink-sub: lighten($pink, 20%);
-$pink-text: darken($pink, 50%);
-$pink-muted: grayscale($pink);
-$pink-bg: lighten($pink, 38%);
-$pink-heading: lighten($pink, 30%);
+$red-base: #C46767;
+$red: ("base": $red-base,
+       "sub": lighten($red-base, 20%),
+       "text": darken($red-base, 50%),
+       "muted": grayscale($red-base),
+       "bg": lighten($red-base, 40%),
+       "heading": lighten($red-base, 30%));
 
-//blue
-$blue: #59A2DD;
-$blue-sub: lighten($blue, 10%);
-$blue-text: darken($blue, 50%);
-$blue-muted: grayscale($blue);
-$blue-bg: lighten($blue, 35%);
-$blue-heading: lighten($blue, 25%);
+$pink-base: #D95D87;
+$pink: ("base": $pink-base,
+        "sub": lighten($pink-base, 20%),
+        "text": darken($pink-base, 50%),
+        "muted": grayscale($pink-base),
+        "bg": lighten($pink-base, 38%),
+        "heading": lighten($pink-base, 30%));
 
-//cyan
-$cyan: #42C1D1;
-$cyan-sub: lighten($cyan, 10%);
-$cyan-text: darken($cyan, 50%);
-$cyan-muted: grayscale($cyan);
-$cyan-bg: lighten($cyan, 45%);
-$cyan-heading: lighten($cyan, 35%);
+$orange-base: #F29F23;
+$orange: ("base": $orange-base,
+          "sub": lighten($orange-base, 10%),
+          "text": darken($orange-base, 50%),
+          "muted": grayscale($orange-base),
+          "bg": lighten($orange-base, 45%),
+          "heading": lighten($orange-base, 35%));
 
-//teal
-$teal: #54C2B8;
-$teal-sub: lighten($teal, 10%);
-$teal-text: darken($teal, 50%);
-$teal-muted: grayscale($teal);
-$teal-bg: lighten($teal, 40%);
-$teal-heading: lighten($teal, 30%);
+$blue-base: #59A2DD;
+$blue: ("base": $blue-base,
+        "sub": lighten($blue-base, 10%),
+        "text": darken($blue-base, 50%),
+        "muted": grayscale($blue-base),
+        "bg": lighten($blue-base, 35%),
+        "heading": lighten($blue-base, 25%));
 
-//green
-$green: #6BAB6E;
-$green-sub: lighten($green, 10%);
-$green-text: darken($green, 50%);
-$green-muted: grayscale($green);
-$green-bg: lighten($green, 40%);
-$green-heading: lighten($green, 30%);
+$cyan-base: #42C1D1;
+$cyan: ("base": $cyan-base,
+        "sub": lighten($cyan-base, 10%),
+        "text": darken($cyan-base, 50%),
+        "muted": grayscale($cyan-base),
+        "bg": lighten($cyan-base, 45%),
+        "heading": lighten($cyan-base, 35%));
 
-//orange
-$orange: #F29F23;
-$orange-sub: lighten($orange, 10%);
-$orange-text: darken($orange, 50%);
-$orange-muted: grayscale($orange);
-$orange-bg: lighten($orange, 45%);
-$orange-heading: lighten($orange, 35%);
+$teal-base: #54C2B8;
+$teal: ("base": $teal-base,
+        "sub": lighten($teal-base, 10%),
+        "text": darken($teal-base, 50%),
+        "muted": grayscale($teal-base),
+        "bg": lighten($teal-base, 40%),
+        "heading": lighten($teal-base, 30%));
 
-{% unless site.data.resume.color == "default" %}
+$green-base: #6BAB6E;
+$green: ("base": $green-base,
+         "sub": lighten($green-base, 10%),
+         "text": darken($green-base, 50%),
+         "muted": grayscale($green-base),
+         "bg": lighten($green-base, 40%),
+         "heading": lighten($green-base, 30%));
 
-  $theme-color: ${{ site.data.resume.color }};
-  $theme-sub: ${{ site.data.resume.color }}-sub;
-  $theme-text: ${{ site.data.resume.color }}-text;
-  $theme-muted: ${{ site.data.resume.color }}-muted;
-  $theme-bg: ${{ site.data.resume.color }}-bg;
-  $theme-heading: ${{ site.data.resume.color }}-heading;
+$theme-color: map-get(${{ site.data.resume.color }}, "base");
+$theme-sub: map-get(${{ site.data.resume.color }}, "sub");
+$theme-text:  map-get(${{ site.data.resume.color }}, "text");
+$theme-muted:  map-get(${{ site.data.resume.color }}, "muted");
+$theme-bg:  map-get(${{ site.data.resume.color }}, "bg");
+$theme-heading:  map-get(${{ site.data.resume.color }}, "heading");
 
-  $default: $theme-color;
-  $color-sub: $theme-sub;
-  $color-text: $theme-text;
-  $color-muted: $theme-muted;
-  $color-bg: $theme-bg;
-  $color-heading: $theme-heading;
-
-{% endunless %}
+$color-base: $theme-color;
+$color-sub: $theme-sub;
+$color-text: $theme-text;
+$color-muted: $theme-muted;
+$color-bg: $theme-bg;
+$color-heading: $theme-heading;
 
 @import "bootstrap-sass/bootstrap";
 
@@ -116,6 +113,13 @@ $orange-heading: lighten($orange, 35%);
 body {
   color: $color-text;
   background-color: $color-bg;
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    &.theme-#{$color-name}  {
+      color: map-get(${{ site.data.resume.color }}, "text");
+      background-color: map-get(${{ site.data.resume.color }}, "bg");
+    }
+  }
 }
 
 header {
@@ -123,7 +127,13 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
-  color: $default;
+  color: $color-base;
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    .theme-#{$color-name} & {
+      color: map-get(${{ site.data.resume.color }}, "base");
+    }
+  }
 }
 
 h1 {
@@ -135,9 +145,18 @@ h4 {
 }
 
 a {
-  color: $default;
+  color: $color-base;
   &:hover {
     color: $color-sub;
+  }
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    .theme-#{$color-name} & {
+      color: map-get(${{ site.data.resume.color }}, "base");
+      &:hover {
+        color: map-get(${{ site.data.resume.color }}, "sub");
+      }
+    }
   }
 }
 
@@ -152,6 +171,12 @@ a {
 .panel-default > .panel-heading {
   background-color: $color-heading;
   border: none;
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    .theme-#{$color-name} & {
+      background-color: map-get(${{ site.data.resume.color }}, "heading");
+    }
+  }
 }
 
 .panel-heading {
@@ -220,15 +245,29 @@ a {
 }
 
 .resume-copy {
-  color: $default;
+  color: $color-base;
   font-family: "Quando", sans-serif;
   font-size: 13px;
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    .theme-#{$color-name} & {
+      color: map-get(${{ site.data.resume.color }}, "base");
+    }
+  }
 }
 
 .resume-pic {
   float: left;
   img {
     border: 1px solid $color-sub;
+  }
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    .theme-#{$color-name} & {
+      img {
+        border: 1px solid map-get(${{ site.data.resume.color }}, "sub");
+      }
+    }
   }
 }
 
@@ -247,11 +286,23 @@ a {
   color: $color-sub;
   font-family: "Quando", sans-serif;
   font-size: 12px;
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    .theme-#{$color-name} & {
+      color: map-get(${{ site.data.resume.color }}, "sub");
+    }
+  }
 }
 
 .resume-date {
   color: $color-muted;
   line-height: 1.4;
+
+  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    .theme-#{$color-name} & {
+      color: map-get(${{ site.data.resume.color }}, "muted");
+    }
+  }
 }
 
 @media print {
