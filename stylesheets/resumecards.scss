@@ -114,8 +114,8 @@ body {
   color: $color-text;
   background-color: $color-bg;
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
-    &.theme-#{$color-name}  {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
+    &.theme-#{$color-name} {
       color: map-get(${{ site.data.resume.color }}, "text");
       background-color: map-get(${{ site.data.resume.color }}, "bg");
     }
@@ -129,7 +129,7 @@ header {
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
   color: $color-base;
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
     .theme-#{$color-name} & {
       color: map-get(${{ site.data.resume.color }}, "base");
     }
@@ -150,7 +150,7 @@ a {
     color: $color-sub;
   }
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
     .theme-#{$color-name} & {
       color: map-get(${{ site.data.resume.color }}, "base");
       &:hover {
@@ -172,7 +172,7 @@ a {
   background-color: $color-heading;
   border: none;
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
     .theme-#{$color-name} & {
       background-color: map-get(${{ site.data.resume.color }}, "heading");
     }
@@ -254,7 +254,7 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 13px;
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
     .theme-#{$color-name} & {
       color: map-get(${{ site.data.resume.color }}, "base");
     }
@@ -267,7 +267,7 @@ a {
     border: 1px solid $color-sub;
   }
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
     .theme-#{$color-name} & {
       img {
         border: 1px solid map-get(${{ site.data.resume.color }}, "sub");
@@ -292,7 +292,7 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 12px;
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
     .theme-#{$color-name} & {
       color: map-get(${{ site.data.resume.color }}, "sub");
     }
@@ -303,7 +303,7 @@ a {
   color: $color-muted;
   line-height: 1.4;
 
-  @each $color-name, $color-value in $red, $pink, $blue, $cyan, $teal, $green, $orange {
+  @each $color-name, $color-value in $default, $red, $pink, $blue, $cyan, $teal, $green, $orange {
     .theme-#{$color-name} & {
       color: map-get(${{ site.data.resume.color }}, "muted");
     }
