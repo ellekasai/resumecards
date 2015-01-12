@@ -1,28 +1,34 @@
 $(document).ready(function () {
 
-  $('nav').affix({
+  var $body = $('body');
+  var $nav = $('nav');
+  var $header = $('header');
+  var $themeMenu = $('.resume-dropdown-menu > li > a');
+
+  $nav.affix({
     offset: {
-      top: $('header').outerHeight()
+      top: $header.outerHeight()
     }
   });
 
-  $('nav').on('affix.bs.affix', function (){
-    $('body').css('margin-top', $('nav').height() + parseInt($('nav').css('margin-bottom')));
+  $nav.on('affix.bs.affix', function (){
+    $body.css('margin-top', $nav.height() + parseInt($nav.css('margin-bottom')));
   });
 
-  $('nav').on('affix-top.bs.affix', function (){
-    $('body').css('margin-top', 0);
+  $nav.on('affix-top.bs.affix', function (){
+    $body.css('margin-top', 0);
   });
 
-  var themeMenu = $('.resume-dropdown-menu > li > a');
+  $themeMenu.on('click', function() {
 
-  themeMenu.on('click', function() {
-    event.preventDefault();
+    $body.attr('class', '');
+
     var themeColor = $(this).attr('id');
-    console.log(themeColor);
     var themeColorClass = "theme-" + themeColor;
-    console.log(themeColorClass);
-    $('body').addClass(themeColorClass);
+    $body.addClass(themeColorClass);
+
+    event.preventDefault();
+
   });
 
 });
