@@ -228,10 +228,15 @@ a {
   width: 100%;
 }
 
+.resume-dropdown {
+  display: inline-block;
+  margin-left: 5px;
+}
+
 .resume-left {
   padding-top: 7px;
-  span {
-    margin-left: 20px;
+  > span {
+    margin-right: 10px;
     color: #999;
   }
 }
