@@ -211,6 +211,17 @@ a {
   font-size: 14px;
 }
 
+.btn-primary {
+  @include button-variant(#fff, $color-base, darken($color-base, 10%));
+
+  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+    .theme-#{$color-name} & {
+      @include button-variant(#fff, map-get(map-get($all-colors, $color-name), "base"),
+      darken(map-get(map-get($all-colors, $color-name), "base"), 10%));
+    }
+  }
+}
+
 .affix {
   top: 0;
 }
@@ -294,7 +305,12 @@ a {
   }
 }
 
-.resume-date {
+.resume-duration {
+  margin-bottom: 0;
+}
+
+.resume-duration,
+.resume-location {
   color: $color-muted;
   line-height: 1.4;
 
@@ -365,7 +381,8 @@ a {
     font-size: 10px;
   }
 
-  .resume-date {
+  .resume-duration,
+  .resume-location {
     font-size: 9px;
   }
 
