@@ -335,6 +335,13 @@ a {
   .panel-body {
     height: auto;
   }
+  .resume-pic {
+    float: none;
+    margin-bottom: 10px;
+  }
+  .resume-pic + .resume-baseinfo {
+    margin-left: 0;
+  }
 }
 
 @media print {
