@@ -19,7 +19,7 @@ $(document).ready(function () {
     $body.css('margin-top', 0);
   });
 
-  $themeMenu.on('click', function() {
+  $themeMenu.on('click', function(event) {
 
     $body.attr('class', '');
 
