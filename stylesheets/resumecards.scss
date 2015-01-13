@@ -139,6 +139,10 @@ h4 {
   margin: 0 0 5px 0;
 }
 
+ul {
+  padding-left: 20px;
+}
+
 a {
   color: $color-base;
   &:hover {
@@ -321,9 +325,9 @@ a {
   }
 }
 
-@media (max-width: $screen-xs-max) {
+@media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
   .panel-body {
-    height: auto;
+    height: 270px;
   }
 }
 
