@@ -10,9 +10,9 @@ copy: "UI/UX Designer from Japan, currently based in Vancouver, Canada. I am cur
 # - default
 # - red
 # - pink
+# - brown
 # - blue
-# - cyan
+# - bluegray
 # - teal
 # - green
-# - orange
-color: default
+color: bluegray

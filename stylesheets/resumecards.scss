@@ -11,7 +11,7 @@ $font-family-base: "Muli", sans-serif;
 $headings-font-family: "Quando", sans-serif;
 $headings-font-weight: 700;
 
-$font-size-base: 12px;
+$font-size-base: 14px;
 $font-size-h1: floor(($font-size-base * 2.5));
 $font-size-h2: floor(($font-size-base * 1.4));
 $font-size-h3: floor(($font-size-base * 1));
@@ -30,9 +30,9 @@ $grid-gutter-width: 20px;
 $default-base: #8064A7;
 $red-base: #C46767;
 $pink-base: #D95D87;
-$orange-base: #F29F23;
+$bluegray-base: #5F7C8A;
 $blue-base: #59A2DD;
-$cyan-base: #42C1D1;
+$brown-base: #785447;
 $teal-base: #54C2B8;
 $green-base: #6BAB6E;
 
@@ -54,24 +54,24 @@ $all-colors: ("default": ("base": $default-base,
                        "muted": grayscale($pink-base),
                        "bg": lighten($pink-base, 38%),
                        "heading": lighten($pink-base, 30%)),
-              "orange": ("base": $orange-base,
-                         "sub": lighten($orange-base, 10%),
-                         "text": darken($orange-base, 50%),
-                         "muted": grayscale($orange-base),
-                         "bg": lighten($orange-base, 45%),
-                         "heading": lighten($orange-base, 35%)),
+              "brown": ("base": $brown-base,
+                       "sub": lighten($brown-base, 10%),
+                       "text": darken($brown-base, 50%),
+                       "muted": grayscale($brown-base),
+                       "bg": lighten($brown-base, 50%),
+                       "heading": lighten($brown-base, 40%)),
               "blue": ("base": $blue-base,
                        "sub": lighten($blue-base, 10%),
                        "text": darken($blue-base, 50%),
                        "muted": grayscale($blue-base),
                        "bg": lighten($blue-base, 35%),
                        "heading": lighten($blue-base, 25%)),
-              "cyan": ("base": $cyan-base,
-                       "sub": lighten($cyan-base, 10%),
-                       "text": darken($cyan-base, 50%),
-                       "muted": grayscale($cyan-base),
-                       "bg": lighten($cyan-base, 45%),
-                       "heading": lighten($cyan-base, 35%)),
+              "bluegray": ("base": $bluegray-base,
+                         "sub": lighten($bluegray-base, 10%),
+                         "text": darken($bluegray-base, 50%),
+                         "muted": grayscale($bluegray-base),
+                         "bg": lighten($bluegray-base, 45%),
+                         "heading": lighten($bluegray-base, 40%)),
               "teal":  ("base": $teal-base,
                         "sub": lighten($teal-base, 10%),
                         "text": darken($teal-base, 50%),
@@ -109,7 +109,7 @@ body {
   color: $color-text;
   background-color: $color-bg;
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     &.theme-#{$color-name} {
       color: map-get(map-get($all-colors, $color-name), "text");
       background-color: map-get(map-get($all-colors, $color-name), "bg");
@@ -124,7 +124,7 @@ header {
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
   color: $color-base;
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -149,7 +149,7 @@ a {
     color: $color-sub;
   }
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
       &:hover {
@@ -171,7 +171,7 @@ a {
   background-color: $color-heading;
   border: none;
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       background-color: map-get(map-get($all-colors, $color-name), "heading");
     }
@@ -179,7 +179,7 @@ a {
 }
 
 .panel-heading {
-  height: 30px;
+  height: 35px;
   overflow: hidden;
 }
 
@@ -191,7 +191,7 @@ a {
 }
 
 .panel-body {
-  height: 250px;
+  height: 280px;
   overflow: hidden;
 }
 
@@ -218,7 +218,7 @@ a {
 .btn-primary {
   @include button-variant(#fff, $color-base, darken($color-base, 10%));
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       @include button-variant(#fff, map-get(map-get($all-colors, $color-name), "base"),
       darken(map-get(map-get($all-colors, $color-name), "base"), 10%));
@@ -264,7 +264,7 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 13px;
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -277,7 +277,7 @@ a {
     border: 1px solid $color-sub;
   }
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       img {
         border: 1px solid map-get(map-get($all-colors, $color-name), "sub");
@@ -297,12 +297,12 @@ a {
   }
 }
 
-.resume-subtitle {
+.resume-subheading {
   color: $color-sub;
   font-family: "Quando", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "sub");
     }
@@ -318,7 +318,7 @@ a {
   color: $color-muted;
   line-height: 1.4;
 
-  @each $color-name in "default", "red", "pink", "blue", "cyan", "teal", "green", "orange" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "muted");
     }
@@ -327,7 +327,7 @@ a {
 
 @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
   .panel-body {
-    height: 270px;
+    height: 320px;
   }
 }
 
@@ -353,7 +353,7 @@ a {
 
   body {
     background-color: transparent;
-    font-size: 9px;
+    font-size: 10px;
   }
 
   h1 {
@@ -377,12 +377,25 @@ a {
     border: 1px solid rgba(0,0,0,.1);
   }
 
+  .panel-heading {
+    height: 25px;
+    overflow: hidden;
+  }
+
   .panel-body {
     height: 210px;
   }
 
   .resume-header {
     padding-bottom: 5px;
+  }
+
+  .resume-pic {
+    float: left;
+  }
+
+  .resume-pic + .resume-baseinfo {
+    margin-left: 120px;
   }
 
   .resume-pic img {
@@ -394,7 +407,7 @@ a {
     font-size: 12px;
   }
 
-  .resume-subtitle {
+  .resume-subheading {
     font-size: 10px;
   }
 
