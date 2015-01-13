@@ -331,6 +331,12 @@ a {
   }
 }
 
+@media (max-width: $screen-xs-max) {
+  .panel-body {
+    height: auto;
+  }
+}
+
 @media print {
   @include make-grid(sm);
 
