@@ -306,8 +306,60 @@ a {
 
 @media print {
   @include make-grid(sm);
+
   @page {
-    size: letter;
-    margin: 0px auto;
+    size: US-Letter;
   }
+
+  body {
+    background-color: transparent;
+    font-size: 9px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h4 {
+    margin-bottom: 3px;
+    font-size: 11px;
+    + p {
+      margin-bottom: 5px;
+    }
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  .panel {
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,.1);
+  }
+
+  .panel-body {
+    height: 215px;
+  }
+
+  .resume-header {
+    padding-bottom: 5px;
+  }
+
+  .resume-pic img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .resume-copy {
+    font-size: 12px;
+  }
+
+  .resume-position {
+    font-size: 10px;
+  }
+
+  .resume-date {
+    font-size: 9px;
+  }
+
 }
