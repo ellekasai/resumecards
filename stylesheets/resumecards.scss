@@ -282,7 +282,7 @@ a {
   }
 }
 
-.resume-position {
+.resume-subtitle {
   color: $color-sub;
   font-family: "Quando", sans-serif;
   font-size: 12px;
@@ -302,6 +302,12 @@ a {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "muted");
     }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .panel-body {
+    height: auto;
   }
 }
 
@@ -338,10 +344,6 @@ a {
     border: 1px solid rgba(0,0,0,.1);
   }
 
-  .panel-body {
-    height: 215px;
-  }
-
   .resume-header {
     padding-bottom: 5px;
   }
@@ -355,7 +357,7 @@ a {
     font-size: 12px;
   }
 
-  .resume-position {
+  .resume-subtitle {
     font-size: 10px;
   }
 
