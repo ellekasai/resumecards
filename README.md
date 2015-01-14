@@ -23,9 +23,7 @@ jekyll serve --watch
 ```
 ### Warning
 
-* Once the server is started, you must go to [http://localhost:4000/resumecards/](http://localhost:4000/resumecards/), since `baseurl` is set as `"/resumecards"` initially.
-
-To use  http://localhost:4000/, change `baseurl` in `_config.yml` to `""` .
+* Once the server is started, you must go to [http://localhost:4000/resumecards/](http://localhost:4000/resumecards/), since `baseurl` is set as `"/resumecards"` initially. To use  http://localhost:4000/, change `baseurl` in `_config.yml` to `""` .
 
 * PDFを保存する時はBackground graphicsをONにしてください
 
@@ -37,7 +35,7 @@ You **should** change these files before deploying:
 
 * `_config.yml`: You must change `baseurl`and `url`.
   * Make sure to restart the server after you update `_config.yml`.
-* `_data/resume.yml`: You must change `photo`, `name` and `url`.
+* `_data/resume.yml`: You must change `photo`, `name` and `url`. `demo: false`とすると､上下の説明部分がなくなります｡
 * `CNAME`: Change this to host Shiori on a custom domain.
 * `README.md`: Write your own README!
 * `_includes/nav.html`: Modify or remove your contact links.
