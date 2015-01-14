@@ -8,11 +8,13 @@ Resumecardsは､簡単にキレイなレジュメを作成できるジェネレ
 
 ![](images/sample_default.png)
 
+You can save it as PDF too:
+
 ![](images/resume_print_preview.png)
 
 ## :briefcase: Usage :briefcase:
 
-**Note:** If you're not familiar with Jekyll, please read up on [Jekyll's documentation](http://jekyllrb.com/) first.
+**Note:** ResumeCards uses Jekyll. Please read [Jekyll's documentation](http://jekyllrb.com/) if you get stuck.
 
 [Fork this repo](http://github.com/ellekasai/resumecard/fork), clone it, and then run:
 
@@ -29,8 +31,6 @@ jekyll serve --watch
 
 * Once the server is started, you must go to [http://localhost:4000/resumecards/](http://localhost:4000/resumecards/), since `baseurl` is set as `"/resumecards"` initially. To use  http://localhost:4000/, change `baseurl` in `_config.yml` to `""` .
 
-* PDFを保存する時はBackground graphicsをONにしてください
-
 ## :briefcase: Customization :briefcase:
 
 ### Required
@@ -39,7 +39,7 @@ You **should** change these files before deploying:
 
 * `_config.yml`: You must change `baseurl`and `url`.
   * Make sure to restart the server after you update `_config.yml`.
-* `_data/resume.yml`: You must change `photo`, `name` and `url`. `demo: false`とすると､上下の説明部分がなくなります｡
+* `_data/resume.yml`: You must change `photo`, `name` and `url`. Also, you must set `demo` to `false` to hide everything but your resume.
 * `CNAME`: Change this to host Shiori on a custom domain.
 * `README.md`: Write your own README!
 * `_includes/nav.html`: Modify or remove your contact links.
@@ -49,12 +49,11 @@ You **should** change these files before deploying:
 
 You **may** customize these files - they're optional:
 
-* `favicon.ico`: Favicon.
 * `_includes/script.html`: Extra stuff before the `</body>` tag.
 
 ### Customize the Theme
 
-To change my color theme, edit `_data/resume.yml`.
+To customize the color theme, edit the `color` section of `_data/resume.yml`.
 
 #### Red
 ![](images/sample_red.png)
