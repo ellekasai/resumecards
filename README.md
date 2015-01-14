@@ -1,12 +1,16 @@
-# resumecards
+# :briefcase: resumecards :briefcase:
 
 Resumecardsは､簡単にキレイなレジュメを作成できるジェネレーターツールです｡
 
-## Live Demo
+## :briefcase: Live Demo :briefcase:
 
 ### [View Demo and Documentation](http://ellekasai.github.io/resumecards)
 
-## Usage
+![](images/sample_bluegray.png)
+
+![](images/resume_print_preview.png)
+
+## :briefcase: Usage :briefcase:
 
 **Note:** If you're not familiar with Jekyll, please read up on [Jekyll's documentation](http://jekyllrb.com/) first.
 
@@ -27,7 +31,7 @@ jekyll serve --watch
 
 * PDFを保存する時はBackground graphicsをONにしてください
 
-## Customization
+## :briefcase: Customization :briefcase:
 
 ### Required
 
@@ -67,9 +71,6 @@ To change my color theme, edit `_data/resume.yml`.
 #### Blue
 ![](images/sample_blue.png)
 
-#### Blue Gray
-![](images/sample_bluegray.png)
-
 #### Teal
 ![](images/sample_teal.png)
 
@@ -83,7 +84,7 @@ You can customize CSS by editing these files:
 * `_sass/custom-bootstrap-variables.scss`: Change Bootstrap variables ([documentation](http://getbootstrap.com/customize)).
 * `stylesheets/resumecards.scss`: Add your own custom CSS.
 
-## Author & License
+## :briefcase: Author & License :briefcase:
 
 Elle Kasai
 
@@ -92,7 +93,7 @@ Elle Kasai
 
 [MIT License](http://ellekasai.mit-license.org).
 
-## Special Thanks
+## :briefcase: Special Thanks :briefcase:
 
 * [Shu Uesugi](http://github.com/chibicode) - for the guidance on this project.
 
