@@ -42,14 +42,9 @@ You **should** change these files before deploying:
 * `_data/resume.yml`: You must change `photo`, `name` and `url`. Also, you must set `demo` to `false` to hide everything but your resume.
 * `CNAME`: Change this to host Shiori on a custom domain.
 * `README.md`: Write your own README!
+* `_includes/script.html`: Extra stuff before the `</body>` tag. Change or remove the default Google Analytics code.
 * `_includes/nav.html`: Modify or remove your contact links.
 * `_posts/card-1~card-9`: Add your own posts.
-
-### Optional
-
-You **may** customize these files - they're optional:
-
-* `_includes/script.html`: Extra stuff before the `</body>` tag.
 
 ### Customize the Theme
 
