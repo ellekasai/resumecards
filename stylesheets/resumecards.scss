@@ -118,7 +118,7 @@ body {
 }
 
 header {
-  margin: 40px auto;
+  margin: 80px auto 40px;
   border-radius: 4px;
   background-color: white;
   box-sizing: border-box;
@@ -388,6 +388,9 @@ a {
 }
 
 @media (max-width: $screen-xs-max) {
+  header {
+    margin-top: 20px;
+  }
   .panel-body {
     height: auto;
   }
