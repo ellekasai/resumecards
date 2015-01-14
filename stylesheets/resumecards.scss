@@ -244,6 +244,14 @@ a {
   top: 0;
 }
 
+.modal-body,
+.modal-footer {
+  text-align: center;
+  img {
+    border: 1px solid $color-sub;
+  }
+}
+
 /*———————————–———————————–
   Styles
 ———————————–———————————–*/
