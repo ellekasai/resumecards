@@ -106,23 +106,21 @@ $color-heading: $theme-heading;
 ———————————–———————————–*/
 
 body {
-  color: $color-text;
   background-color: $color-bg;
+  border-top: 7px solid $color-base;
+  color: $color-text;
 
   @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
     &.theme-#{$color-name} {
-      color: map-get(map-get($all-colors, $color-name), "text");
       background-color: map-get(map-get($all-colors, $color-name), "bg");
+      border-color: map-get(map-get($all-colors, $color-name), "base");
+      color: map-get(map-get($all-colors, $color-name), "text");
     }
   }
 }
 
 header,
 footer {
-  border-radius: 4px;
-  background-color: white;
-  box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 15px;
   padding: 20px 30px;
   ul {
@@ -131,14 +129,6 @@ footer {
       margin-top: 20px;
     }
   }
-}
-
-header {
-  margin: 80px auto 40px;
-}
-
-footer {
-  margin: 20px auto 40px;
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
@@ -219,12 +209,12 @@ a {
   overflow: hidden;
 }
 
-.navbar {
-  width: 100%;
-}
-
 .navbar-default {
   background-color: #FFF;
+}
+
+.navbar {
+  margin-bottom: 40px;
 }
 
 .navbar-brand {
@@ -258,6 +248,11 @@ a {
   Styles
 ———————————–———————————–*/
 
+.resume-top,
+.resume-bottom {
+  background-color: #fff;
+}
+
 .resume-intro {
   margin-top: 30px;
   text-align: center;
@@ -280,7 +275,7 @@ a {
 }
 
 .resume-intro-download {
-  margin-top: 30px;
+  margin: 30px 0;
 }
 
 .resume-point,
@@ -298,25 +293,22 @@ a {
   }
 }
 
-.resume-nav {
-  width: 100%;
-}
-
 .resume-dropdown {
   display: inline-block;
   margin-left: 5px;
 }
 
-.resume-left {
+.resume-nav {
   padding-top: 7px;
+  text-align: center;
   > span {
     margin-right: 10px;
     color: #999;
   }
 }
 
-.resume-right {
-  padding-top: 10px;
+.resume-content {
+  padding: 40px 0 20px;
 }
 
 .resume-header {
@@ -398,11 +390,11 @@ a {
 }
 
 @media (max-width: $screen-xs-max) {
-  header {
-    margin-top: 20px;
-  }
   .panel-body {
     height: auto;
+  }
+  .resume-content {
+    padding: 20px 0 0;
   }
   .resume-pic {
     float: none;
@@ -428,6 +420,7 @@ a {
 
   body {
     background-color: transparent;
+    border: none;
     font-size: 10px;
   }
 
