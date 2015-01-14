@@ -117,8 +117,8 @@ body {
   }
 }
 
-header {
-  margin: 80px auto 40px;
+header,
+footer {
   border-radius: 4px;
   background-color: white;
   box-sizing: border-box;
@@ -131,6 +131,14 @@ header {
       margin-top: 20px;
     }
   }
+}
+
+header {
+  margin: 80px auto 40px;
+}
+
+footer {
+  margin: 20px auto 40px;
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
@@ -276,11 +284,13 @@ a {
 }
 
 .resume-point,
-.resume-notes {
+.resume-notes,
+.resume-author {
   margin-top: 50px;
 }
 
-.resume-point {
+.resume-point,
+.resume-usage {
   img {
     display: block;
     margin-top: 10px;
