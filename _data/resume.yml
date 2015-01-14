@@ -1,3 +1,6 @@
+# IMPORTANT: Set this to false.
+demo: true
+
 # Theme customization is done on this file instead of _config.yml so that
 # you don't have to restart Jekyll to see changes.
 
@@ -16,7 +19,3 @@ copy: "UI/UX Designer from Japan, currently based in Vancouver, Canada. I am cur
 # - teal
 # - green
 color: default
-
-# You can hide the demo by setting demo: false on
-# the YAML front matter for the page.
-demo: true
