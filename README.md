@@ -56,9 +56,6 @@ You **may** customize these files - they're optional:
 
 To change my color theme, edit `_data/resume.yml`.
 
-#### Default
-![](images/sample_default.png)
-
 #### Red
 ![](images/sample_red.png)
 
@@ -70,6 +67,9 @@ To change my color theme, edit `_data/resume.yml`.
 
 #### Blue
 ![](images/sample_blue.png)
+
+#### Purple
+![](images/sample_purple.png)
 
 #### Teal
 ![](images/sample_teal.png)
