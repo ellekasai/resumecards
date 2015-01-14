@@ -122,13 +122,20 @@ body {
 header,
 footer {
   font-size: 15px;
-  padding: 20px 30px;
   ul {
     margin-top: 20px;
     > li + li {
       margin-top: 20px;
     }
   }
+}
+
+header {
+  padding: 20px 0 30px;
+}
+
+footer {
+  padding: 20px 0 60px
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
@@ -308,10 +315,10 @@ a {
 
 .resume-nav {
   padding-top: 7px;
+  color: #999;
   text-align: center;
-  > span {
-    margin-right: 10px;
-    color: #999;
+  > span + button {
+    margin-left: 10px;
   }
 }
 
