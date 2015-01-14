@@ -4,7 +4,7 @@ Resumecardsは､簡単にキレイなレジュメを作成できるジェネレ
 
 ## Live Demo
 
-### [View Demo and Documentation](http://ellekasai.github.io/resumecards).
+### [View Demo and Documentation](http://ellekasai.github.io/resumecards)
 
 ## Usage
 
