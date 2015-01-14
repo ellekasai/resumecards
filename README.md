@@ -33,7 +33,32 @@ jekyll serve --watch
 
 ## :briefcase: Usage :briefcase:
 
-### Required
+### Editing Your Resume
+
+Edit `_posts/card-[1-9].md` like this:
+
+```markdown
+---
+type: "Work Experience"
+heading: "Bizreach"
+subheading: "Junior Product Designer"
+duration: "October 2013 – September 2014 (1 year)"
+location: "Tokyo, Japan"
+---
+
+Write in markdown here...
+```
+
+If you don't need some of the metadata, just remove them:
+
+```markdown
+---
+type: "Work Experience"
+heading: "Bizreach"
+---
+```
+
+### Other Files to Modify
 
 You **should** change these files before deploying:
 
