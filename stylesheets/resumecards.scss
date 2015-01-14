@@ -118,7 +118,19 @@ body {
 }
 
 header {
-  padding-bottom: 50px;
+  margin: 40px auto;
+  border-radius: 4px;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  padding: 20px 30px;
+  ul {
+    margin-top: 20px;
+    > li + li {
+      margin-top: 20px;
+    }
+  }
 }
 
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
@@ -141,6 +153,10 @@ h4 {
 
 ul {
   padding-left: 20px;
+}
+
+pre {
+  margin: 20px 0;
 }
 
 a {
@@ -233,6 +249,44 @@ a {
 /*———————————–———————————–
   Styles
 ———————————–———————————–*/
+
+.resume-intro {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.resume-intro-title {
+  display: block;
+  font-size: 40px;
+  color: $color-base;
+  font-family: "Quando", sans-serif;
+  + p {
+    margin-top: 30px;
+  }
+
+  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+    .theme-#{$color-name} & {
+      color: map-get(map-get($all-colors, $color-name), "base");
+    }
+  }
+}
+
+.resume-intro-download {
+  margin-top: 30px;
+}
+
+.resume-point,
+.resume-notes {
+  margin-top: 50px;
+}
+
+.resume-point {
+  img {
+    display: block;
+    margin-top: 10px;
+    width: 500px;
+  }
+}
 
 .resume-nav {
   width: 100%;
@@ -343,6 +397,12 @@ a {
   }
   .resume-pic + .resume-baseinfo {
     margin-left: 0;
+  }
+  .resume-point {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
 
