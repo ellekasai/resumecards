@@ -107,13 +107,11 @@ $color-heading: $theme-heading;
 
 body {
   background-color: $color-bg;
-  border-top: 7px solid $color-base;
   color: $color-text;
 
   @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     &.theme-#{$color-name} {
       background-color: map-get(map-get($all-colors, $color-name), "bg");
-      border-color: map-get(map-get($all-colors, $color-name), "base");
       color: map-get(map-get($all-colors, $color-name), "text");
     }
   }
@@ -266,6 +264,16 @@ a {
 .resume-top,
 .resume-bottom {
   background-color: #fff;
+}
+
+.resume-top {
+  border-top: 7px solid $color-base;
+
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+    .theme-#{$color-name} & {
+      border-color: map-get(map-get($all-colors, $color-name), "base");
+    }
+  }
 }
 
 .resume-intro {

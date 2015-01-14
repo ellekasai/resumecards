@@ -16,3 +16,7 @@ copy: "UI/UX Designer from Japan, currently based in Vancouver, Canada. I am cur
 # - teal
 # - green
 color: default
+
+# You can hide the demo by setting demo: false on
+# the YAML front matter for the page.
+demo: false

@@ -17,6 +17,7 @@
     <![endif]-->
   </head>
   <body>
+    {% if site.data.resume.demo %}
     <div class="hidden-print resume-top">
       <header class="container">
         <div class="resume-intro">
@@ -43,6 +44,7 @@
         </div>
       </header>
     </div>
+    {% endif %}
     <div class="container resume-content">
       <nav class="navbar navbar-default hidden-print hidden-xs" role="navigation">
         <div class="resume-nav">
@@ -127,6 +129,7 @@
         {% endfor %}
       </div>
     </div>
+    {% if site.data.resume.demo %}
     <div class="hidden-print resume-bottom">
       <footer class="container">
         <div class="resume-usage">
@@ -171,6 +174,7 @@ location: "Tokyo, Japan"
         </div>
       </footer>
     </div>
+    {% endif %}
     <script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
     <script src="{{ "/javascripts/resumecards.js" | prepend:site.baseurl }}"></script>
