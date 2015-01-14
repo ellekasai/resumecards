@@ -40,7 +40,7 @@ You **should** change these files before deploying:
 * `_config.yml`: You must change `baseurl`and `url`.
   * Make sure to restart the server after you update `_config.yml`.
 * `_data/resume.yml`: You must change `photo`, `name` and `url`. Also, you must set `demo` to `false` to hide everything but your resume.
-* `CNAME`: Change this to host Shiori on a custom domain.
+* `CNAME`: Change this to host ResumeCards on a custom domain.
 * `README.md`: Write your own README!
 * `_includes/script.html`: Extra stuff before the `</body>` tag. Change or remove the default Google Analytics code.
 * `_includes/nav.html`: Modify or remove your contact links.
@@ -70,13 +70,6 @@ To customize the color theme, edit the `color` section of `_data/resume.yml`.
 
 #### Green
 ![](http://cl.ly/image/031u3a070V3f/sample_green.png)
-
-### Add Your Own CSS
-
-You can customize CSS by editing these files:
-
-* `_sass/custom-bootstrap-variables.scss`: Change Bootstrap variables ([documentation](http://getbootstrap.com/customize)).
-* `stylesheets/resumecards.scss`: Add your own custom CSS.
 
 ## :briefcase: Author & License :briefcase:
 
