@@ -1,18 +1,18 @@
-# :briefcase: resumecards :briefcase:
+# :briefcase: ResumeCards :briefcase:
 
-Resumecardsは､簡単にキレイなレジュメを作成できるジェネレーターツールです｡
+ResumeCards is a Markdown based resume generator. It looks great on mobile/desktop and can be saved as PDF.
 
 ## :briefcase: Live Demo :briefcase:
 
 ### [View Demo and Documentation](http://ellekasai.github.io/resumecards)
 
-![](images/sample_default.png)
+![](http://cl.ly/image/3O342N0b0y1h/sample_default.png)
 
 You can save it as PDF too:
 
-![](images/resume_print_preview.png)
+![](http://cl.ly/image/091w0b0M2S3G/resume_print_preview.png)
 
-## :briefcase: Usage :briefcase:
+## :briefcase: Installation :briefcase:
 
 **Note:** ResumeCards uses Jekyll. Please read [Jekyll's documentation](http://jekyllrb.com/) if you get stuck.
 
@@ -31,7 +31,7 @@ jekyll serve --watch
 
 * Once the server is started, you must go to [http://localhost:4000/resumecards/](http://localhost:4000/resumecards/), since `baseurl` is set as `"/resumecards"` initially. To use  http://localhost:4000/, change `baseurl` in `_config.yml` to `""` .
 
-## :briefcase: Customization :briefcase:
+## :briefcase: Usage :briefcase:
 
 ### Required
 
@@ -51,25 +51,25 @@ You **should** change these files before deploying:
 To customize the color theme, edit the `color` section of `_data/resume.yml`.
 
 #### Red
-![](images/sample_red.png)
+![](http://cl.ly/image/0Q442g393E0O/sample_red.png)
 
 #### Pink
-![](images/sample_pink.png)
+![](http://cl.ly/image/2r0d3C201Q2y/sample_pink.png)
 
 #### Brown
-![](images/sample_brown.png)
+![](http://cl.ly/image/1A3p0v2n2I2O/sample_brown.png)
 
 #### Blue
-![](images/sample_blue.png)
+![](http://cl.ly/image/102r3e1y010w/sample_blue.png)
 
 #### Purple
-![](images/sample_purple.png)
+![](http://cl.ly/image/130Y2y1X1228/sample_purple.png)
 
 #### Teal
-![](images/sample_teal.png)
+![](http://cl.ly/image/3L042k3L3i2m/sample_teal.png)
 
 #### Green
-![](images/sample_green.png)
+![](http://cl.ly/image/031u3a070V3f/sample_green.png)
 
 ### Add Your Own CSS
 
