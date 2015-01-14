@@ -23,9 +23,11 @@ jekyll serve --watch
 ```
 ### Warning
 
-Once the server is started, you must go to [http://localhost:4000/resumecards/](http://localhost:4000/resumecards/), since `baseurl` is set as `"/resumecards"` initially.
+* Once the server is started, you must go to [http://localhost:4000/resumecards/](http://localhost:4000/resumecards/), since `baseurl` is set as `"/resumecards"` initially.
 
 To use  http://localhost:4000/, change `baseurl` in `_config.yml` to `""` .
+
+* PDFを保存する時はBackground graphicsをONにしてください
 
 ## Customization
 
