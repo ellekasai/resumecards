@@ -27,21 +27,21 @@ $grid-gutter-width: 20px;
   Theme Colors
 ———————————–———————————–*/
 
-$default-base: #8064A7;
+$default-base: #5F7C8A;
 $red-base: #C46767;
 $pink-base: #D95D87;
-$bluegray-base: #5F7C8A;
 $blue-base: #59A2DD;
+$purple-base: #8064A7;
 $brown-base: #785447;
 $teal-base: #54C2B8;
 $green-base: #6BAB6E;
 
 $all-colors: ("default": ("base": $default-base,
-                          "sub": lighten($default-base, 20%),
+                          "sub": lighten($default-base, 10%),
                           "text": darken($default-base, 50%),
                           "muted": grayscale($default-base),
-                          "bg": lighten($default-base, 40%),
-                          "heading": lighten($default-base, 30%)),
+                          "bg": lighten($default-base, 45%),
+                          "heading": lighten($default-base, 40%)),
               "red": ("base": $red-base,
                       "sub": lighten($red-base, 20%),
                       "text": darken($red-base, 50%),
@@ -66,12 +66,12 @@ $all-colors: ("default": ("base": $default-base,
                        "muted": grayscale($blue-base),
                        "bg": lighten($blue-base, 35%),
                        "heading": lighten($blue-base, 25%)),
-              "bluegray": ("base": $bluegray-base,
-                         "sub": lighten($bluegray-base, 10%),
-                         "text": darken($bluegray-base, 50%),
-                         "muted": grayscale($bluegray-base),
-                         "bg": lighten($bluegray-base, 45%),
-                         "heading": lighten($bluegray-base, 40%)),
+              "purple": ("base": $purple-base,
+                          "sub": lighten($purple-base, 20%),
+                          "text": darken($purple-base, 50%),
+                          "muted": grayscale($purple-base),
+                          "bg": lighten($purple-base, 40%),
+                          "heading": lighten($purple-base, 30%)),
               "teal":  ("base": $teal-base,
                         "sub": lighten($teal-base, 10%),
                         "text": darken($teal-base, 50%),
@@ -110,7 +110,7 @@ body {
   border-top: 7px solid $color-base;
   color: $color-text;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     &.theme-#{$color-name} {
       background-color: map-get(map-get($all-colors, $color-name), "bg");
       border-color: map-get(map-get($all-colors, $color-name), "base");
@@ -134,7 +134,7 @@ footer {
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
   color: $color-base;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -163,7 +163,7 @@ a {
     color: $color-sub;
   }
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
       &:hover {
@@ -185,7 +185,7 @@ a {
   background-color: $color-heading;
   border: none;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       background-color: map-get(map-get($all-colors, $color-name), "heading");
     }
@@ -232,7 +232,7 @@ a {
 .btn-primary {
   @include button-variant(#fff, $color-base, darken($color-base, 10%));
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       @include button-variant(#fff, map-get(map-get($all-colors, $color-name), "base"),
       darken(map-get(map-get($all-colors, $color-name), "base"), 10%));
@@ -267,7 +267,7 @@ a {
     margin-top: 30px;
   }
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -320,7 +320,7 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 13px;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -333,7 +333,7 @@ a {
     border: 1px solid $color-sub;
   }
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       img {
         border: 1px solid map-get(map-get($all-colors, $color-name), "sub");
@@ -360,7 +360,7 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 14px;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "sub");
     }
@@ -376,7 +376,7 @@ a {
   color: $color-muted;
   line-height: 1.4;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "bluegray", "teal", "green" {
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "muted");
     }
