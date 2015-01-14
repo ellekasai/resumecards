@@ -18,7 +18,37 @@
   </head>
   <body>
     <header class="container hidden-print">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore facere fugit optio. Officia, hic, laboriosam! Recusandae eligendi, magni fugit nostrum eum, beatae voluptas consequatur ratione dignissimos vel necessitatibus. Aut, cupiditate?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur fugiat temporibus perferendis ea, quasi, reiciendis dolore, porro vero voluptatem et repellendus alias consequatur atque deserunt inventore sequi a. Doloribus, optio.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium recusandae quis ullam, totam qui tempore sed, doloribus quam esse ratione debitis, exercitationem ea ipsum tenetur nihil odio incidunt. Officiis, molestias?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, mollitia voluptas ducimus molestias voluptates dolorum nulla, sapiente ratione ullam praesentium odit accusantium natus cum! Laboriosam dolorum dolores alias maxime repellendus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo labore blanditiis, at possimus tempore similique ipsum asperiores porro deserunt ullam expedita quis voluptates, amet, cupiditate officiis repellendus, eos ipsam laborum.</p>
+      <!--これは何なのか､どんな風に使えるのかを説明する-->
+
+      <!--イントロ部分-->
+      <span>Resumecards</span>
+      <p>Resumecardsは､簡単にキレイなレジュメを作成できるジェネレーターツールです｡</p>
+      <p>Written by <a href="http://ellekasai.com/about" target="_blank">Elle Kasai</a> (<a href="http://twitter.com/ellekasai" target="_blank">@ellekasai</a>), a UI/UX designer based in Vancouver, Canada.</p>
+      <p><a href="https://github.com/ellekasai/resumecards" target="_blank" class="btn btn-primary btn-lg space-sm">Download on GitHub →</a></p>
+
+      <!--特長-->
+      <p>Resumecardsは<a href="http://blog.intercom.io/why-cards-are-the-future-of-the-web/" target="_blank">カードデザイン</a>を参考にデザインしました｡</p>
+      <p>カードの内容を編集するには､Markdown記法を使用します｡</p>
+      <pre>
+        ---
+        type: "Work Experience"
+        heading: "Bizreach"
+        subheading: "Junior Product Designer"
+        duration: "October 2013 – September 2014 (1 year)"
+        location: "Tokyo, Japan"
+        ---
+
+        <a href="https://www.bizreach.jp/" target="_blank">BizReach</a> is Japan's top job site exclusive to business executives. I worked on front-end design and coding. My most recent project was <a href="https://woman.bizreach.jp/" target="_blank">Bizreach Woman</a>, a job site specifically for female business executives in Japan.
+      </pre>
+      <p>カラーテーマは8種類の中から選べます｡</p>
+      <p>print buttonを押すと印刷ダイアログが表示されようになっており､そのまま印刷したり､PDFとして保存することができます｡</p>
+      <p>
+        <a href="resume_print_sample.pdf" target="_blank"><img src="{{ "/images/resume_print_preview.png" | prepend:site.baseurl }}" width="400"></a>
+      </p>
+
+      <!--注意-->
+      <p>動作確認はChromeでのみ行っていますので､Chromeで使用されることをお勧めします｡</p>
+      <p>カードは9枚に固定されていて､各カードは印刷時に1枚に収まるように高さが固定されています｡</p>
     </header>
     <nav class="navbar navbar-default hidden-print hidden-xs navbar-static-top" role="navigation">
       <div class="container">
