@@ -19,4 +19,4 @@ color: default
 
 # You can hide the demo by setting demo: false on
 # the YAML front matter for the page.
-demo: false
+demo: true
