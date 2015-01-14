@@ -47,7 +47,22 @@
       <nav class="navbar navbar-default hidden-print hidden-xs" role="navigation">
         <div class="resume-nav">
           <span>Built with <a href="https://github.com/ellekasai/resumecards" target="_blank">Resumecards</a><span class="hidden-sm">, a Markdown based resume generator.</span></span>
-          <button onclick="window.print()" class="btn btn-primary">Save as PDF</button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saveAsPdf">
+            Save as PDF
+          </button>
+          <div class="modal fade" id="saveAsPdf" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <img src="{{ "/images/resume_print_dialog.png" | prepend:site.baseurl }}" class="img-rounded img-responsive">
+                </div>
+                <div class="modal-footer">
+                  <button onclick="window.print()" class="btn btn-primary">Open Print Dialog</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="dropdown resume-dropdown">
             <button type="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Theme <span class="caret"></span></button>
             <ul class="dropdown-menu resume-dropdown-menu" role="menu">
