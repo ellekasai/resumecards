@@ -69,7 +69,6 @@ You **should** change these files before deploying:
 * `README.md`: Write your own README!
 * `_includes/script.html`: Extra stuff before the `</body>` tag. Change or remove the default Google Analytics code.
 * `_includes/nav.html`: Modify or remove your contact links.
-* `_posts/card-1~card-9`: Add your own posts.
 
 ### Customize the Theme
 
