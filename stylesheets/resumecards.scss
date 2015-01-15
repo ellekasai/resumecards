@@ -13,7 +13,7 @@ $headings-font-weight: 400;
 
 $font-size-base: 14px;
 $font-size-h1: floor(($font-size-base * 2.5));
-$font-size-h2: floor(($font-size-base * 1.4));
+$font-size-h2: floor(($font-size-base * 1.6));
 $font-size-h3: floor(($font-size-base * 1));
 $font-size-h4: floor(($font-size-base * 1.2));
 $font-size-h5: floor(($font-size-base * 1));
@@ -303,8 +303,16 @@ a {
   }
 }
 
+.resume-intro-lead {
+  font-size: 18px;
+}
+
 .resume-intro-download {
-  margin: 30px 0;
+  margin-top: 30px;
+}
+
+.resume-intro-btns {
+  margin-top: 20px;
 }
 
 .resume-point,
@@ -360,7 +368,8 @@ a {
 }
 
 .resume-content {
-  padding: 40px 0 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .resume-header {
@@ -446,7 +455,7 @@ a {
     height: auto;
   }
   .resume-content {
-    padding: 20px 0 0;
+    padding-top: 40px;
   }
   .resume-pic {
     float: none;
