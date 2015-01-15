@@ -252,6 +252,14 @@ a {
 .modal-body,
 .modal-footer {
   text-align: center;
+  color: $color-base;
+
+  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+    .theme-#{$color-name} & {
+      color: map-get(map-get($all-colors, $color-name), "base");
+    }
+  }
+
   img {
     border: 1px solid $color-sub;
 
@@ -259,6 +267,10 @@ a {
       .theme-#{$color-name} & {
         border-color: map-get(map-get($all-colors, $color-name), "sub");
       }
+    }
+
+    + p {
+      margin-top: 20px;
     }
   }
 }
@@ -317,8 +329,9 @@ a {
 
 .resume-point,
 .resume-howitworks,
-.resume-notes,
-.resume-author {
+.resume-why,
+.resume-author,
+.resume-thanks {
   margin-top: 30px;
   h2 {
     text-align: center;

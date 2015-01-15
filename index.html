@@ -39,8 +39,8 @@
             <ul class="resume-point-list">
               <li>すべて、Markdownで書かれています。</li>
               <li>ご覧の通り、モバイルでもデスクトップでも見やすいレスポンシブデザインで､ウェブ上で綺麗に表示できます。</li>
-              <li>また、PDFにしたときにぴったり一枚に収まるようになっています。Save as PDFをクリックしてみてください。</li>
-              <li>さらに、テーマカラーを8色用意いたしました。お好みの色をお選びください。</li>
+              <li>また、PDFにしたときにぴったり一枚に収まるようになっています。Save as PDFをクリックしてみてください。(注: モバイルではできません。生成されたPDFは<a href="http://cl.ly/1e2p3D2K032M/download/resume-print-sample.pdf">こちら</a>。)</li>
+              <li>さらに、テーマカラーを8色用意いたしました。お好みの色をお選びください。(注: モバイルではできません。)</li>
             </ul>
           </div>
         </div>
@@ -72,6 +72,7 @@
               <div class="modal-content">
                 <div class="modal-body">
                   <img src="{{ "/images/resume_print_dialog.png" | prepend:site.baseurl }}" class="img-rounded" width="400" height="342">
+                  <p>Warning: Currently, ResumeCards works the best on Chrome.<br>You need to adjust the CSS for Firefox/Safari.</p>
                 </div>
                 <div class="modal-footer">
                   <button onclick="window.print()" class="btn btn-primary">Open Print Dialog</button>
@@ -174,13 +175,12 @@ location: "Tokyo, Japan"
             </p>
           </div>
         </div>
-        <div class="row resume-notes">
+        <div class="row resume-why">
           <div class="col-md-8 col-md-offset-2">
-            <h2>Notes</h2>
-            <ul>
-              <li>動作確認はChromeでのみ行っていますので､Chromeで使用されることをお勧めします｡</li>
-              <li>カードは9枚で高さが固定されています｡</li>
-            </ul>
+            <h2>Why ResumeCards?</h2>
+            <p>私は転職活動中のUIデザイナーです。リクルーターとやり取りしていたら、レジュメをPDFにして送ってくださいと言われました。わたしがやってきたことはAboutページや、LinkedInページ、GitHubで見れるので「なんでこのURL送るのじゃだめなの?PDFにしないといけないの」という疑問がありました。</p>
+            <p>「じゃあLinkedInやGitHubをPDFにしてくれるサービスはあるかな?」と思ったところ、気にいったデザインのものを見つけることができませんでした。また、Resumeは大体1ページに乂める必要がありましたが、LinkedInに書いた文章は長すぎて、GitHub上の情報は短すぎました。情報をそのままPDFにするのは無理があり、新しく文章を書く必要がありました。</p>
+            <p>なので、自分が好きなMarkdownを使って、簡単に作れ、Aboutページのようにネット上にも表示でき、さらにPDFにしたときに見栄えの良くなるものを作りたいと考えました。試行錯誤した結果、最近流行りのカードデザインを採用すると、デスクトップやモバイルでも見栄えが映えるだけでなく、高さを指定することによって、1ページにも収まるようにできると分かりました。そしてせっかく作ったので、他にも使いたいと思う方がいるかと思い、オープンソースにして公開することにしました。そしてそれぞれの人が自分の個性を表現出来るように、テーマカラーも指定できるようにしたのが、ResumeCardsです。</p>
           </div>
         </div>
         <div class="row resume-author">
@@ -189,6 +189,15 @@ location: "Tokyo, Japan"
             <p>Written by <a href="http://ellekasai.com/about" target="_blank">Elle Kasai</a> (<a href="http://twitter.com/ellekasai" target="_blank">@ellekasai</a>), a UI/UX designer based in Vancouver, Canada.</p>
             <p><a href="http://ellekasai.com/about/" target="_blank" class="btn btn-primary btn-lg">Learn More about Elle →</a></p>
             <p><a href="https://twitter.com/ellekasai" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-dnt="true" data-size="large">Follow @ellekasai</a></p>
+          </div>
+        </div>
+        <div class="row resume-thanks">
+          <div class="col-md-8 col-md-offset-2">
+            <h2 class="subheading">Thanks!</h2>
+            <p class="text-center"><a href="https://twitter.com/share" class="twitter-share-button" data-via="ellekasai" data-size="large">Tweet</a> <iframe src="http://ghbtns.com/github-btn.html?user=ellekasai&repo=resumecards&type=watch&count=true&size=large"
+      allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30" style="margin-top: 14px;"></iframe></p>
+            <p class="space-md">P.S. If you like ResumeCards, you should check out my other project: <a href="http://ellekasai.github.io/purplecoat.js/" target="_blank">Purplecoat.js</a>, Simple Labeled Overlays.</p>
+            <p>Thanks to <a href="https://twitter.com/chibicode" target="_blank">@chibicode</a> for revising my English.</p>
           </div>
         </div>
       </footer>
