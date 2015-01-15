@@ -22,9 +22,9 @@
       <header class="container">
         <div class="resume-intro">
           <span class="resume-intro-title">ResumeCards</span>
-          <p>ResumeCards is a Markdown based resume generator. It looks great on mobile/desktop and can be saved as PDF.</p>
+          <p>ResumeCards is a Markdown based resume generator.<br>It looks great on mobile/desktop and can be saved as PDF.</p>
           <p class="resume-intro-download">
-            <a href="https://github.com/ellekasai/resumecards" target="_blank" class="btn btn-primary btn-lg space-sm">Download on GitHub →</a>
+            <a href="https://github.com/ellekasai/resumecards" target="_blank" class="btn btn-primary btn-lg">Download on GitHub →</a>
           </p>
           <p>
             <a href="https://twitter.com/share" class="twitter-share-button" data-via="ellekasai" data-size="large">Tweet</a>
@@ -32,15 +32,14 @@
               allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
           </p>
         </div>
-        <div class="resume-point">
-          <h2>What is Resumecards?</h2>
-          <ul class="resume-point-list">
-            <li>
-              Resumecardsは近頃主流になった<a href="http://blog.intercom.io/why-cards-are-the-future-of-the-web/" target="_blank">カードデザイン</a>を採用しています
-            </li>
-            <li>レスポンシブデザインで､モバイルでもデスクトップでも見やすくなっているので､自分のプロフィールページとして使用することができます</li>
-            <li>PDFにした時にぴったり1枚におさまるようにデザインしているので､PDFにしてリクルーターに送ることもできます</li>
-          </ul>
+        <div class="row resume-point">
+          <div class="col-md-8 col-md-offset-2">
+            <h2>What is Resumecards?</h2>
+            <ul class="resume-point-list">
+              <li>PDFにした時にぴったり1枚におさまるようにデザインしています</li>
+              <li>モバイルでもデスクトップでも見やすいレスポンシブデザインで､プロフィールページとして使用できます</li>
+            </ul>
+          </div>
         </div>
       </header>
     </div>
@@ -49,6 +48,19 @@
       <nav class="navbar navbar-default hidden-print hidden-xs" role="navigation">
         <div class="resume-nav">
           <span>Built with <a href="https://github.com/ellekasai/resumecards" target="_blank">ResumeCards</a><span class="hidden-sm">, a Markdown based resume generator</span></span>.
+          <div class="dropdown resume-dropdown">
+            <button type="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Theme <span class="caret"></span></button>
+            <ul class="dropdown-menu resume-dropdown-menu" role="menu">
+              <li><a href="#" id="default">Default</a></li>
+              <li><a href="#" id="red">Red</a></li>
+              <li><a href="#" id="pink">Pink</a></li>
+              <li><a href="#" id="brown">Brown</a></li>
+              <li><a href="#" id="blue">Blue</a></li>
+              <li><a href="#" id="purple">Purple</a></li>
+              <li><a href="#" id="teal">Teal</a></li>
+              <li><a href="#" id="green">Green</a></li>
+            </ul>
+          </div>
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#saveAsPdf">
             Save as PDF
           </button>
@@ -64,19 +76,6 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="dropdown resume-dropdown">
-            <button type="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Theme <span class="caret"></span></button>
-            <ul class="dropdown-menu resume-dropdown-menu" role="menu">
-              <li><a href="#" id="default">Default</a></li>
-              <li><a href="#" id="red">Red</a></li>
-              <li><a href="#" id="pink">Pink</a></li>
-              <li><a href="#" id="brown">Brown</a></li>
-              <li><a href="#" id="blue">Blue</a></li>
-              <li><a href="#" id="purple">Purple</a></li>
-              <li><a href="#" id="teal">Teal</a></li>
-              <li><a href="#" id="green">Green</a></li>
-            </ul>
           </div>
         </div>
       </nav>
@@ -132,12 +131,16 @@
     {% if site.data.resume.demo %}
     <div class="hidden-print resume-bottom">
       <footer class="container">
-        <div class="resume-usage">
-          <h2>Usage</h2>
-          <ul>
-            <li>
-              <span>Step 1:</span> カードの中身をMarkdownで編集しましょう
-              <pre>
+        <div class="row resume-usage">
+          <div class="col-md-8 col-md-offset-2">
+            <h2>Usage</h2>
+            <ul>
+              <li>
+                <span>Setp 0:</span> GitHubから<a href="https://github.com/ellekasai/resumecards" target="_blank" >ResumeCard</a>をダウンロードしましょう｡
+              </li>
+              <li>
+                <span>Step 1:</span> 下の例を参考に､<code>_posts</code>フォルダに入っている9枚のMarkdownファイルを編集しましょう｡
+                <pre>
 ---
 type: "Work Experience"
 heading: "Bizreach"
@@ -147,30 +150,37 @@ location: "Tokyo, Japan"
 ---
 
 <a href="https://www.bizreach.jp/" target="_blank">BizReach</a> is Japan's top job site exclusive to business executives. I worked on front-end design and coding. My most recent project was <a href="https://woman.bizreach.jp/" target="_blank">Bizreach Woman</a>, a job site specifically for female business executives in Japan.
-              </pre>
-            </li>
-            <li>
-              <span>Step 2:</span>
-              カラーテーマを選びましょう｡それぞれのテーマはnavbarのthemeボタンで選ぶことによって確かめることができます｡
-            </li>
-            <li>
-              <span>Step 3:</span>
-              NavbarのPrint buttonを押して印刷しましょう
-              <a href="http://cl.ly/1e2p3D2K032M/resume-print-sample.pdf" target="_blank"><br><img src="http://cl.ly/image/091w0b0M2S3G/resume_print_preview.png" class="img-rounded"></a>
-            </li>
-          </ul>
+                </pre>
+              </li>
+              <li>
+                <span>Step 2:</span>
+                レジュメのカラーテーマを選びましょう｡テーマは8種類あり､レジュメ上部のthemeボタンをクリックすることでテーマのプレビューを確かめることができます｡カラーテーマが決まったら､<code>_data</code>フォルダの<code>resume.yml</code>ファイルで設定しましょう｡
+              </li>
+              <li>
+                <span>Step 3:</span>
+                <code>resume.yml</code>ファイルでの設定が済んだら､レジュメ上部のPrint ボタンを押してPDFを保存しましょう｡
+                <a href="http://cl.ly/1e2p3D2K032M/resume-print-sample.pdf" target="_blank"><br><img src="http://cl.ly/image/091w0b0M2S3G/resume_print_preview.png" class="img-rounded img-responsive"></a>
+              </li>
+            </ul>
+            <p class="text-center">
+              <a href="https://github.com/ellekasai/resumecards" target="_blank" class="btn btn-primary btn-lg">Download on GitHub →</a>
+            </p>
+          </div>
         </div>
-        <div class="resume-notes">
-          <h2>Notes</h2>
-          <ul>
-            <li>動作確認はChromeでのみ行っていますので､Chromeで使用されることをお勧めします｡</li>
-            <li>カードは9枚に固定されています｡</li>
-          </ul>
+        <div class="row resume-notes">
+          <div class="col-md-8 col-md-offset-2">
+            <h2>Notes</h2>
+            <ul>
+              <li>動作確認はChromeでのみ行っていますので､Chromeで使用されることをお勧めします｡</li>
+              <li>カードは9枚で高さが固定されています｡</li>
+            </ul>
         </div>
-        <div class="resume-author">
-          <h2>Author</h2>
-          <p>Written by <a href="http://ellekasai.com/about" target="_blank">Elle Kasai</a> (<a href="http://twitter.com/ellekasai" target="_blank">@ellekasai</a>), a UI/UX designer based in Vancouver, Canada.</p>
-          <p><a href="http://ellekasai.com/about/" target="_blank" class="btn btn-primary btn-lg">Learn More about Elle →</a></p>
+        <div class="row resume-author">
+          <div class="col-md-8 col-md-offset-2">
+            <h2>Author</h2>
+            <p>Written by <a href="http://ellekasai.com/about" target="_blank">Elle Kasai</a> (<a href="http://twitter.com/ellekasai" target="_blank">@ellekasai</a>), a UI/UX designer based in Vancouver, Canada.</p>
+            <p><a href="http://ellekasai.com/about/" target="_blank" class="btn btn-primary btn-lg">Learn More about Elle →</a></p>
+          </div>
         </div>
       </footer>
     </div>

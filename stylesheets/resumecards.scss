@@ -254,6 +254,12 @@ a {
   text-align: center;
   img {
     border: 1px solid $color-sub;
+
+    @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+      .theme-#{$color-name} & {
+        border-color: map-get(map-get($all-colors, $color-name), "sub");
+      }
+    }
   }
 }
 
@@ -302,21 +308,46 @@ a {
 }
 
 .resume-point,
+.resume-usage,
 .resume-notes,
 .resume-author {
-  margin-top: 50px;
+  margin-top: 30px;
+  h2 {
+    text-align: center;
+  }
 }
 
 .resume-usage {
+  ul {
+    margin-bottom: 40px;
+  }
+  span {
+    color: $color-base;
+
+    @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+      .theme-#{$color-name} & {
+        color: map-get(map-get($all-colors, $color-name), "base");
+      }
+    }
+  }
   img {
-    width: 500px;
     margin-top: 10px;
+  }
+}
+
+.resume-author {
+  text-align: center;
+  p {
+    margin-top: 20px;
+  }
+  p:last-child {
+    margin-top: 30px;
   }
 }
 
 .resume-dropdown {
   display: inline-block;
-  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .resume-nav {
@@ -440,7 +471,7 @@ a {
   }
 
   body {
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
     font-size: 10px;
   }
