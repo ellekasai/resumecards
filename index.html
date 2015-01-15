@@ -81,9 +81,6 @@
           </div>
         </div>
       </nav>
-      {% if site.data.resume.demo %}
-      <div class="visible-xs resume-view-pdf"><a href="http://cl.ly/1e2p3D2K032M/download/resume-print-sample.pdf" target="_blank" class="btn btn-primary btn-lg">View Generated PDF</a></div>
-      {% endif %}
       <div class="row resume-header">
         <div class="col-sm-8 resume-profile clearfix">
           <figure class="resume-pic">
@@ -132,6 +129,9 @@
           </div>
         {% endfor %}
       </div>
+      {% if site.data.resume.demo %}
+      <div class="visible-xs resume-view-pdf"><a href="http://cl.ly/1e2p3D2K032M/download/resume-print-sample.pdf" class="btn btn-primary btn-lg">View Generated PDF</a></div>
+      {% endif %}
     </div>
     {% if site.data.resume.demo %}
     <div class="hidden-print resume-bottom">
