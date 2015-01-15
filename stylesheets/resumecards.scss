@@ -329,18 +329,13 @@ a {
   ul {
     margin-bottom: 40px;
   }
-  span {
-    color: $color-base;
-
-    @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
-      .theme-#{$color-name} & {
-        color: map-get(map-get($all-colors, $color-name), "base");
-      }
-    }
-  }
   img {
     margin-top: 10px;
   }
+}
+
+.resume-howitworks-btn {
+  margin-top: 20px;
 }
 
 .resume-author {

@@ -34,10 +34,13 @@
         </div>
         <div class="row resume-point">
           <div class="col-md-8 col-md-offset-2">
-            <h2>What is Resumecards?</h2>
+            <h2>こちらがデモです。</h2>
+            <p>下にありますのが、私の履歴書をResumeCardsで作ってみたものです。</p>
             <ul class="resume-point-list">
-              <li>PDFにした時にぴったり1枚におさまるようにデザインしています</li>
-              <li>モバイルでもデスクトップでも見やすいレスポンシブデザインで､プロフィールページとして使用できます</li>
+              <li>すべて、Markdownで書かれています。</li>
+              <li>ご覧の通り、モバイルでもデスクトップでも見やすいレスポンシブデザインで､ウェブ上で綺麗に表示できます。</li>
+              <li>また、PDFにしたときにぴったり一枚に収まるようになっています。Save as PDFをクリックしてみてください。</li>
+              <li>さらに、テーマカラーを8色用意いたしました。お好みの色をお選びください。</li>
             </ul>
           </div>
         </div>
@@ -134,13 +137,26 @@
         <div class="row resume-howitworks">
           <div class="col-md-8 col-md-offset-2">
             <h2>How It Works</h2>
-            <ul>
-              <li>
-                <span>Setp 0:</span> GitHubから<a href="https://github.com/ellekasai/resumecards" target="_blank" >ResumeCard</a>をダウンロードしましょう｡
-              </li>
-              <li>
-                <span>Step 1:</span> 下の例を参考に､<code>_posts</code>フォルダに入っている9枚のMarkdownファイルを編集しましょう｡
-                <pre>
+            <p>上のデモは、以下のように動いています。</p>
+            <p>まず大見出しの部分は、下のように_data/resume.ymlを書き換えることによって表示されています。テーマカラーもここで指定できます</p>
+            <pre>
+photo: "http://url/to/photo.jpg"
+name: "Elle Kasai"
+copy: "UI/UX Designer from Japan..."
+color: default</pre>
+            <p>つぎに、右上の部分は、下のように_includes/_nav.htmlを書き換えることによって表示されています。Font Awesomeのアイコンが利用できます。</p>
+            <pre>&lt;p&gt;
+  &lt;i class="fa fa-twitter fa-lg fa-fw"&gt;&lt;/i&gt;
+  &lt;a href="https://twitter.com/ellekasai/"&gt;@ellekasai&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class="fa fa-github fa-lg fa-fw"&gt;&lt;/i&gt;
+  &lt;a href="https://github.com/ellekasai/"&gt;@ellekasai&lt;/a&gt;
+&lt;/p&gt;
+
+...</pre>
+            <p>さいごに、カードの部分は、下のように_postsフォルダ内のMarkdownファイルを編集することによって書かれています。</p>
+            <pre>
 ---
 type: "Work Experience"
 heading: "Bizreach"
@@ -149,20 +165,11 @@ duration: "October 2013 – September 2014 (1 year)"
 location: "Tokyo, Japan"
 ---
 
-<a href="https://www.bizreach.jp/" target="_blank">BizReach</a> is Japan's top job site exclusive to business executives. I worked on front-end design and coding. My most recent project was <a href="https://woman.bizreach.jp/" target="_blank">Bizreach Woman</a>, a job site specifically for female business executives in Japan.
-                </pre>
-              </li>
-              <li>
-                <span>Step 2:</span>
-                レジュメのカラーテーマを選びましょう｡テーマは8種類あり､レジュメ上部のthemeボタンをクリックすることでテーマのプレビューを確かめることができます｡カラーテーマが決まったら､<code>_data</code>フォルダの<code>resume.yml</code>ファイルで設定しましょう｡
-              </li>
-              <li>
-                <span>Step 3:</span>
-                <code>resume.yml</code>ファイルでの設定が済んだら､レジュメ上部のPrint ボタンを押してPDFを保存しましょう｡
-                <a href="http://cl.ly/1e2p3D2K032M/resume-print-sample.pdf" target="_blank"><br><img src="http://cl.ly/image/091w0b0M2S3G/resume_print_preview.png" class="img-rounded img-responsive"></a>
-              </li>
-            </ul>
-            <p class="text-center">
+![BizReach](https://www.bizreach.jp/) is Japan's top job site exclusive to business executives. ...</pre>
+            <p>これらは、Jekyllによって編集されています。GitHubページはJekyllをサポートしているので、簡単にデプロイすることができます。</p>
+            <p>最後の秘訣は、CSSでカードの高さを調節しているため、LetterサイズのPDFにしたときにピッタリの大きさになるようにしています。Web上で見て、カードの中に文字が収まっていれば、PDFにしても収まります。</p>
+            <p>詳しくは、GitHubにドキュメンテーションが書いてありますので、そちらをご覧ください。</p>
+            <p class="text-center resume-howitworks-btn">
               <a href="https://github.com/ellekasai/resumecards" target="_blank" class="btn btn-primary btn-lg">Download on GitHub →</a>
             </p>
           </div>
