@@ -99,6 +99,8 @@ $color-muted: $theme-muted;
 $color-bg: $theme-bg;
 $color-heading: $theme-heading;
 
+$color-list: "default", "red", "pink", "brown", "blue", "purple", "teal", "green";
+
 @import "bootstrap-sass/bootstrap";
 
 /*———————————–———————————–
@@ -109,7 +111,7 @@ body {
   background-color: $color-bg;
   color: $color-text;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     &.theme-#{$color-name} {
       background-color: map-get(map-get($all-colors, $color-name), "bg");
       color: map-get(map-get($all-colors, $color-name), "text");
@@ -139,7 +141,7 @@ footer {
 h1, h2, h3, h4, h5, h6, .panel-title, .resume-contact {
   color: $color-base;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -168,7 +170,7 @@ a {
     color: $color-sub;
   }
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
       &:hover {
@@ -190,7 +192,7 @@ a {
   background-color: $color-heading;
   border: none;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       background-color: map-get(map-get($all-colors, $color-name), "heading");
     }
@@ -237,7 +239,7 @@ a {
 .btn-primary {
   @include button-variant(#fff, $color-base, darken($color-base, 10%));
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       @include button-variant(#fff, map-get(map-get($all-colors, $color-name), "base"),
       darken(map-get(map-get($all-colors, $color-name), "base"), 10%));
@@ -254,7 +256,7 @@ a {
   text-align: center;
   color: $color-base;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -263,7 +265,7 @@ a {
   img {
     border: 1px solid $color-sub;
 
-    @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+    @each $color-name in $color-list {
       .theme-#{$color-name} & {
         border-color: map-get(map-get($all-colors, $color-name), "sub");
       }
@@ -287,7 +289,7 @@ a {
 .resume-top {
   border-top: 7px solid $color-base;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       border-color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -308,7 +310,7 @@ a {
     margin-top: 30px;
   }
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -404,7 +406,7 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 13px;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "base");
     }
@@ -417,7 +419,7 @@ a {
     border: 1px solid $color-sub;
   }
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       img {
         border: 1px solid map-get(map-get($all-colors, $color-name), "sub");
@@ -444,7 +446,7 @@ a {
   font-family: "Quando", sans-serif;
   font-size: 14px;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "sub");
     }
@@ -460,7 +462,7 @@ a {
   color: $color-muted;
   line-height: 1.4;
 
-  @each $color-name in "default", "red", "pink", "brown", "blue", "purple", "teal", "green" {
+  @each $color-name in $color-list {
     .theme-#{$color-name} & {
       color: map-get(map-get($all-colors, $color-name), "muted");
     }
