@@ -369,20 +369,15 @@ script + p {
 
 /*++ Resume Content Area +++++++++++++++++++++++*/
 
-.resume-view-pdf {
-  margin:  $space-sm 0 $space-md;
+.resume-nav {
+  padding-top: 7px;
+  color: #999;
   text-align: center;
 }
 
 .resume-dropdown {
   display: inline-block;
   margin: 0 $space-xs 0 $space-sm;
-}
-
-.resume-nav {
-  padding-top: 7px;
-  color: #999;
-  text-align: center;
 }
 
 .resume-content {
@@ -464,6 +459,11 @@ script + p {
       color: map-get(map-get($all-colors, $color-name), "muted");
     }
   }
+}
+
+.resume-view-pdf {
+  margin:  $space-sm 0 $space-md;
+  text-align: center;
 }
 
 @media (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
