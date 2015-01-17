@@ -122,12 +122,6 @@ body {
 header,
 footer {
   font-size: 15px;
-  ul {
-    margin-top: 20px;
-    > li + li {
-      margin-top: 20px;
-    }
-  }
 }
 
 header {
@@ -281,6 +275,8 @@ a {
   Styles
 ———————————–———————————–*/
 
+/*++ Resume Top & Bottom Area +++++++++++++++++++++++*/
+
 .resume-top,
 .resume-bottom {
   background-color: #fff;
@@ -296,19 +292,18 @@ a {
   }
 }
 
+/* Resume Intro */
+
 .resume-intro {
   margin-top: 30px;
   text-align: center;
 }
 
-.resume-intro-title {
+.resume-intro-maintitle {
   display: block;
-  font-size: 40px;
   color: $color-base;
+  font-size: 40px;
   font-family: "Quando", sans-serif;
-  + p {
-    margin-top: 30px;
-  }
 
   @each $color-name in $color-list {
     .theme-#{$color-name} & {
@@ -317,60 +312,46 @@ a {
   }
 }
 
-.resume-intro-lead {
+.resume-intro-subtitle {
+  margin-top: 30px;
   font-size: 18px;
 }
 
-.resume-intro-download {
-  margin-top: 30px;
-}
-
 .resume-intro-btns {
-  margin-top: 20px;
-}
-
-.resume-point,
-.resume-howitworks,
-.resume-story,
-.resume-author,
-.resume-thanks {
   margin-top: 30px;
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-}
 
-.resume-howitworks {
-  ul {
-    margin-bottom: 40px;
-  }
-  img {
-    margin-top: 10px;
-  }
-}
-
-.resume-howitworks-btn {
-  margin-top: 30px;
-  margin-bottom: 0;
-}
-
-.resume-author {
-  text-align: center;
   p:last-child {
     margin-top: 30px;
   }
 }
 
-.resume-author-learnmore {
-  margin-top: 30px;
-}
+/* Resume Explanations */
 
-.resume-thanks {
-  p + p {
+.resume-explanations {
+  margin-top: 30px;
+
+  h2 {
+    text-align: center;
+    + * {
+      margin-top: 30px;
+    }
+  }
+
+  ul > li + li {
     margin-top: 20px;
   }
 }
+
+.resume-explanations-btn {
+  margin-top: 30px;
+  text-align: center;
+}
+
+script + p {
+  margin-top: 30px;
+}
+
+/*++ Resume Content Area +++++++++++++++++++++++*/
 
 .resume-view-pdf {
   margin-top:  10px;
