@@ -501,7 +501,7 @@ script + p {
   body {
     background-color: transparent !important;
     border: none;
-    font-size: $font-size-base - 4;
+    font-size: $font-size-base - 3;
   }
 
   h1 {
@@ -522,7 +522,7 @@ script + p {
   }
 
   .panel-heading {
-    height: 25px;
+    height: 30px;
     overflow: hidden;
   }
 
@@ -531,7 +531,7 @@ script + p {
   }
 
   .panel-body {
-    height: 210px;
+    height: 225px;
   }
 
   .resume-content {
@@ -574,6 +574,4 @@ script + p {
   .resume-location {
     font-size: $font-size-base - 5;
   }
-
-
 }
