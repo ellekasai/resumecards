@@ -502,77 +502,36 @@ script + p {
   body {
     background-color: transparent !important;
     border: none;
-    font-size: $font-size-base - 3;
-  }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  h4 {
-    font-size: $font-size-base - 4;
   }
 
   ul {
     padding-left: $space-md - 5;
   }
 
-  .panel {
-    box-shadow: none;
-    border: 1px solid rgba(0,0,0,.1);
-  }
-
-  .panel-heading {
-    height: 30px;
-    overflow: hidden;
-  }
-
-  .panel-title {
-    font-size: $font-size-base - 6;
-  }
-
-  .panel-body {
-    height: 225px;
-  }
-
-  .resume-content {
-    padding-top: $space-sm;
-
-    .row + .row {
-      padding-top: $space-md / 4;
-    }
-  }
-
   .resume-pic {
     float: left;
 
     img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
     }
 
     + .resume-baseinfo {
-      margin-left: 120px;
+      margin-left: 140px;
     }
   }
 
-  .resume-baseinfo {
-    p {
-      font-size: $font-size-base - 2;
-    }
+  .panel {
+    box-shadow: none;
+    border: 1px solid #eee;
   }
 
-  .resume-contact {
-    font-size: $font-size-base - 4;
+  .panel-heading {
+    height: 35px;
+    overflow: hidden;
   }
 
-  .resume-subheading {
-    margin: ($space-xs - 2) 0 $space-xs;
-    font-size: $font-size-base - 4;
-  }
-
-  .resume-duration,
-  .resume-location {
-    font-size: $font-size-base - 5;
+  .panel-body {
+    height: 280px;
   }
 }
