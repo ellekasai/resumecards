@@ -7,3 +7,19 @@ exclude:
   - "CNAME"
   - "Gemfile"
   - "Gemfile.lock"
+  - "vendor"
+
+plugins:
+  - jekyll-assets
+
+assets:
+  prefix: ""
+  assets:
+    - "*.ico"
+    - "*.json"
+    - "*.png"
+    - "*.txt"
+    - "*.xml"
+  sources:
+    - _assets/favicons
+    - _assets/txt
