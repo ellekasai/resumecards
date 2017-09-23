@@ -2,7 +2,7 @@ Unfortunately, this project is **no longer maintained**.
 
 I now have other priorities in my life and no longer have time to update this library. Email me at elle.kasai@gmail.com if you'd like to reach me.
 
-# :briefcase: ResumeCards :briefcase:
+# :briefcase: ResumeCards :briefcase: [![CircleCI](https://circleci.com/gh/ayharano/resumecards/tree/gh-pages.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/ayharano/resumecards/tree/gh-pages)
 
 ResumeCards is a Markdown based resume generator. It looks great on mobile/desktop and can be saved as PDF.
 
