@@ -1,0 +1,75 @@
+version: 2
+
+jobs:
+  build:
+    # The Firebase tools want a v6.x version of Node but Circle CI v1
+    # defaults to v4.x. Set the latest LTS version.
+    docker:
+      - image: circleci/node:6.11.3-stretch
+
+    steps:
+      - checkout
+
+      # Need to install firebase-tools so that the deploy works
+      - run:
+          name: Install firebase-tools
+          command: sudo npm install -g firebase-tools
+
+      # Restore ruby dep cache
+      - restore_cache:
+          key: ruby-dep-{{ checksum "Gemfile" }}-{{ checksum "favicons.rb" }}
+
+      - run:
+          name: Setup ruby-install, ruby, bundler, bundle install and favicons dependencies
+          command: |
+            PATH="$(pwd)/vendor/bundle/ruby/2.4.0/bin:$(pwd)/vendor/ruby/bin:${PATH}"
+            export PATH
+            echo "PATH=${PATH}"
+            if [ ! -d "$(pwd)/vendor/ruby" ]; then
+              wget -O ruby-install-0.6.1.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.1.tar.gz
+              tar -xzvf ruby-install-0.6.1.tar.gz
+              cd ruby-install-0.6.1/
+              sudo make install
+              cd ..
+              ruby-install --jobs=2 --install-dir $(pwd)/vendor/ruby ruby 2.4.2
+              gem install bundler down rest-client
+              bundle install --path vendor/bundle
+            fi
+
+      # Store bundle cache
+      - save_cache:
+          key: ruby-dep-{{ checksum "Gemfile" }}-{{ checksum "favicons.rb" }}
+          paths:
+            - vendor/ruby
+            - vendor/bundle
+
+      - run:
+          name: Setup favicons
+          command: |
+            PATH="$(pwd)/vendor/bundle/ruby/2.4.0/bin:$(pwd)/vendor/ruby/bin:${PATH}"
+            export PATH
+            echo "PATH=${PATH}"
+            ORIGINAL_IMG_URL=$(grep photo _data/resume.yml | awk -F'photo:' '{print $2}' | grep -o 'http[[:graph:]]*' | sed 's,.$,,')
+            export ORIGINAL_IMG_URL
+            echo "ORIGINAL_IMG_URL=${ORIGINAL_IMG_URL}"
+            ruby favicons.rb
+
+      # Need to tell Circle CI how to build the site
+      - run:
+          name: Build using Jekyll
+          command: |
+            PATH="$(pwd)/vendor/bundle/ruby/2.4.0/bin:$(pwd)/vendor/ruby/bin:${PATH}"
+            export PATH
+            echo "PATH=${PATH}"
+            bundle update
+            bundle install --path vendor/bundle
+            bundle exec jekyll build --verbose
+
+      # How you tell Circle to deploy to Firebase. The important things to
+      # note here are the FIREBASE_TOKEN and the PROJECT_ID env variables.
+      - deploy:
+          name: Deploy build from master into production
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              firebase deploy --project ${PROJECT_ID} --token=${FIREBASE_TOKEN} --non-interactive
+            fi

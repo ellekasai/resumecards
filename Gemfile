@@ -1,3 +1,7 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "github-pages", ">= 29"
+gem 'github-pages', '>= 29'
+
+group :plugins do
+  gem 'jekyll-assets'
+end
