@@ -1,4 +1,4 @@
-baseurl: "/resumecards" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+baseurl: "" # The subpath of your site. Use "" if you're hosting a blog at the root level.
 url: "http://localhost:4000/resumecards/" # the base hostname & protocol for your site
 
 exclude:
