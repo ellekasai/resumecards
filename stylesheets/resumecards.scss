@@ -236,8 +236,13 @@ a {
 }
 
 .panel-body {
-  height: 280px;
+  height: 200px;
   overflow: hidden;
+}
+
+.panel-padding {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Navbar */
@@ -362,6 +367,11 @@ a {
 .resume-explanations-btn {
   margin-top: $space-lg;
   text-align: center;
+}
+
+.resume-image {
+  max-width:50%;
+  height:200px;
 }
 
 script + p {

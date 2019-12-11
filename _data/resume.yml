@@ -4,7 +4,7 @@ demo: false
 # Theme customization is done on this file instead of _config.yml so that
 # you don't have to restart Jekyll to see changes.
 
-photo: "http://www.mohsaad.com/assets/images/profile.png"
+photo: "http://mohsaad.com/assets/imgs/profpic.jpg"
 name: "Mohammad Saad"
 # copy: "I'm a UI/UX Developer based in Vancouver, Canada. More than five years of experience in design/development and have a passion for giving back to the local tech community as an instructor."
 copy: "I'm a software engineer in the San Francisco Bay Area, currently working at the Toyota Research Institute. Several years of experience working on building systems for autonomous vehicles."
@@ -19,4 +19,4 @@ copy: "I'm a software engineer in the San Francisco Bay Area, currently working 
 # - purple
 # - teal
 # - green
-color: blue
+color: teal
